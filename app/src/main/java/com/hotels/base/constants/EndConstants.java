@@ -7,5 +7,5 @@ package com.hotels.base.constants;
 /*URLs of server web services */
 public class EndConstants {
 
-    public static final String LOGIN_URL = "/login";
+    public static final String LOGIN_URL = "/login" ;
 }
