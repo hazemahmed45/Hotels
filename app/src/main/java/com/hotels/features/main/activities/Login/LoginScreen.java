@@ -6,6 +6,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.hotels.R;
 import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -19,6 +20,7 @@ public class LoginScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_screen_activity);
         ButterKnife.bind(this);
+        //PrimaryDrawerItem primaryDrawerItem=new PrimaryDrawerItem().
         //drawer=new Drawer();
     }
 }
