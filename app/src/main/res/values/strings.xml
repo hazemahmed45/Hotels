@@ -2,4 +2,12 @@
     <string name="app_name">Hotels</string>
     <string name="sign_up">Sign Up</string>
     <string name="sign_in">Sign In</string>
+    <string name="home">Home</string>
+    <string name="my_points">My Points</string>
+    <string name="account">Account</string>
+    <string name="hotel">Hotel</string>
+    <string name="rooms">Rooms</string>
+    <string name="gallery">Gallery</string>
+    <string name="booking">Booking</string>
+    <string name="about_us">About us</string>
 </resources>
