@@ -1,16 +1,15 @@
-package com.hotels.features.main.activities;
+package com.hotels.features.main.activities.Login;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 
 import com.hotels.R;
 
-public class MainActivity extends AppCompatActivity {
+public class SignUpScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.sign_up_screen_activity);
     }
 }
