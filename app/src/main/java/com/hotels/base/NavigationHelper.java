@@ -3,7 +3,7 @@ package com.hotels.base;
 import android.app.Activity;
 import android.content.Intent;
 
-import com.hotels.features.main.activities.LoginScreen;
+import com.hotels.features.main.activities.Login.LoginScreen;
 
 /**
  * Created by ahmed on 13/04/17.

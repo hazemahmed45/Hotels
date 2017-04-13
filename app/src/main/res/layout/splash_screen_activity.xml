@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.hotels.features.main.activities.Splash.SplashScreen">
 
-    <com.hotels.base.customuicomponents.HotelsTextView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -15,7 +15,7 @@
 
         android:textSize="20sp" />
 
-    <com.hotels.base.customuicomponents.HotelsTextView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Fast, Easy and Powerfull"

@@ -1,4 +1,4 @@
-package com.hotels.features.main.activities;
+package com.hotels.features.main.activities.Login;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

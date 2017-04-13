@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.hotels.R;
+import com.hotels.base.NavigationHelper;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -16,7 +17,7 @@ public class SplashScreen extends AppCompatActivity {
         h.postDelayed(new Runnable() {
             @Override
             public void run() {
-
+                NavigationHelper.launchLoginScreen(SplashScreen.this);
             }
         },2000);
     }
