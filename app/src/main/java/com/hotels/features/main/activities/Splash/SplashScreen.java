@@ -18,6 +18,7 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
                 NavigationHelper.launchLoginScreen(SplashScreen.this);
+                finish();
             }
         },2000);
     }

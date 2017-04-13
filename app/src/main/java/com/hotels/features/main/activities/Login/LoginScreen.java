@@ -4,10 +4,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.hotels.R;
+import com.hotels.base.BaseActivity;
 import com.hotels.base.HotelsApplication;
+import com.hotels.base.NavigationHelper;
 import com.hotels.utils.StringUtil;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
@@ -16,27 +19,26 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-public class LoginScreen extends AppCompatActivity {
+public class LoginScreen extends BaseActivity {
 
     Drawer drawer;
     @BindView(R.id.login_toolbar) Toolbar toolbar;
+    @OnClick(R.id.user_login_signin_button)void SignInButtonClicked()
+    {
+        NavigationHelper.LaunchSignInScreen(LoginScreen.this);
+    }
+    @OnClick(R.id.user_login_signup_button)void SignUpButtonClicked()
+    {
+        NavigationHelper.LaunchSignUpScreen(LoginScreen.this);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_screen_activity);
-        ButterKnife.bind(this);
-        PrimaryDrawerItem[] primaryDrawerItem=
-                {
-                        new PrimaryDrawerItem().withIdentifier(1).withName(StringUtil.getStringRes(R.string.home)),
-                        new PrimaryDrawerItem().withIdentifier(2).withName(StringUtil.getStringRes(R.string.my_points)),
-                        new PrimaryDrawerItem().withIdentifier(3).withName(StringUtil.getStringRes(R.string.account)),
-                        new PrimaryDrawerItem().withIdentifier(4).withName(StringUtil.getStringRes(R.string.hotel)),
-                        new PrimaryDrawerItem().withIdentifier(5).withName(StringUtil.getStringRes(R.string.rooms)),
-                        new PrimaryDrawerItem().withIdentifier(6).withName(StringUtil.getStringRes(R.string.gallery)),
-                        new PrimaryDrawerItem().withIdentifier(7).withName(StringUtil.getStringRes(R.string.booking)),
-                        new PrimaryDrawerItem().withIdentifier(8).withName(StringUtil.getStringRes(R.string.about_us))
-                };
+        ButterKnife.bind(LoginScreen.this);
+
 
         drawer=new DrawerBuilder()
                 .withActivity(LoginScreen.this)
