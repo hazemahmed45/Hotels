@@ -12,5 +12,9 @@
     <string name="about_us">About us</string>
     <string name="email_hint">Email</string>
     <string name="password_hint">Password</string>
+    <string name="phone_hint">Phone Number</string>
+    <string name="first_name_hint">First Name</string>
+    <string name="last_name_hint">Last Name</string>
+    <string name="confirm_password_hint">Confirm Password</string>
     <string name="error_msgs">Rejected</string>
 </resources>
