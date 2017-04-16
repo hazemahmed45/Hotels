@@ -20,9 +20,12 @@ import com.hotels.features.main.activities.Fragments.LoginScreenFragment;
 import com.hotels.model.User;
 import com.hotels.utils.ColorUtil;
 import com.hotels.utils.StringUtil;
+import com.mikepenz.materialdrawer.AccountHeader;
+import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
+import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
 import butterknife.BindView;
@@ -40,10 +43,44 @@ public class LoginScreen extends BaseActivity {
         setContentView(R.layout.login_screen_activity);
         ButterKnife.bind(LoginScreen.this);
         CheckForScreen(User.getUser());
-        DrawerCreate();
+
 
     }
 
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(User.getUser().getEmail()==null)
+        {
+            DrawerCreate();
+        }
+        else
+        {
+            DrawerCreateWithAccount();
+        }
+        CheckForScreen(User.getUser());
+    }
+
+    private void CheckForScreen(User user)
+    {
+        //Toast.makeText(this, user.getEmail(), Toast.LENGTH_SHORT).show();
+        if(user.getEmail()==null)
+        {
+            LoginScreenFragment fm=new LoginScreenFragment();
+            FragmentTransaction FT=getSupportFragmentManager().beginTransaction();
+            FT.replace(R.id.FrameLayoutLoginScreen,fm);
+            FT.commit();
+
+        }
+        else if(user.getEmail()!=null)
+        {
+            HomeScreen HS=new HomeScreen();
+            FragmentTransaction FT=getSupportFragmentManager().beginTransaction();
+            FT.replace(R.id.FrameLayoutLoginScreen,HS);
+            FT.commit();
+        }
+    }
     private void DrawerCreate()
     {
         drawer=new DrawerBuilder()
@@ -87,30 +124,61 @@ public class LoginScreen extends BaseActivity {
                 .build();
 
     }
-    @Override
-    protected void onResume() {
-        super.onResume();
 
-        CheckForScreen(User.getUser());
-    }
-
-    private void CheckForScreen(User user)
+    private void DrawerCreateWithAccount()
     {
-        //Toast.makeText(this, user.getEmail(), Toast.LENGTH_SHORT).show();
-        if(user.getEmail()==null)
-        {
-            LoginScreenFragment fm=new LoginScreenFragment();
-            FragmentTransaction FT=getSupportFragmentManager().beginTransaction();
-            FT.replace(R.id.FrameLayoutLoginScreen,fm);
-            FT.commit();
+        AccountHeader headerResult = new AccountHeaderBuilder()
+                .withActivity(this)
+                .addProfiles(
+                        new ProfileDrawerItem().withName(User.getUser().getEmail()).withEmail(User.getUser().getEmail()).withIcon(R.mipmap.ic_launcher)
+                )
+//                .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
+//                    @Override
+//                    public boolean onProfileChanged(View view, IProfile profile, boolean currentProfile) {
+//                        return false;
+//                    }
+//                })
+                .build();
+        drawer=new DrawerBuilder()
+                .withActivity(LoginScreen.this)
+                .withToolbar(toolbar)
+                .withAccountHeader(headerResult)
+                .addDrawerItems(primaryDrawerItem[0])
+                .addDrawerItems(primaryDrawerItem[1])
+                .addDrawerItems(primaryDrawerItem[2])
+                .addDrawerItems(primaryDrawerItem[3])
+                .addDrawerItems(primaryDrawerItem[4])
+                .addDrawerItems(primaryDrawerItem[5])
+                .addDrawerItems(primaryDrawerItem[6])
+                .addDrawerItems(primaryDrawerItem[7])
+                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                    @RequiresApi(api = Build.VERSION_CODES.M)
+                    @Override
+                    public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
+                        boolean check=true;
+                        switch (position)
+                        {
+                            case 0:
+                            {
+                                CheckForScreen(User.getUser());
 
-        }
-        else if(user.getEmail()!=null)
-        {
-            HomeScreen HS=new HomeScreen();
-            FragmentTransaction FT=getSupportFragmentManager().beginTransaction();
-            FT.replace(R.id.FrameLayoutLoginScreen,HS);
-            FT.commit();
-        }
+                                check= false;
+                            }
+                            case 1:
+                            {
+                                if(User.getUser()==null)
+                                {
+                                    NavigationHelper.LaunchSignInScreen(LoginScreen.this);
+                                }
+                                check=false;
+                            }
+                        }
+
+                        view.setBackgroundColor(ColorUtil.getColor(R.color.MyColor));
+                        return check;
+                    }
+                })
+                .build();
+
     }
 }

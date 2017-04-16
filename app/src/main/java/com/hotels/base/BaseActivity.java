@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.hotels.R;
 import com.hotels.utils.StringUtil;
+import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 
 public class BaseActivity extends AppCompatActivity {
@@ -21,4 +22,5 @@ public class BaseActivity extends AppCompatActivity {
                     new PrimaryDrawerItem().withIdentifier(7).withName(StringUtil.getStringRes(R.string.booking)),
                     new PrimaryDrawerItem().withIdentifier(8).withName(StringUtil.getStringRes(R.string.about_us))
             };
+    public static AccountHeader accountHead;
 }

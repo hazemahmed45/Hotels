@@ -37,12 +37,14 @@ public class SignUpScreen extends AppCompatActivity {
     {
         if(isEmptyConfirmPassword() || isEmptyEmail() || isEmptyFirstName() || isEmptyLastName() || isEmptyPassword() || isEmptyPhone())
         {
-            User.getUser().setEmail(email.getText().toString());
-            User.getUser().setPassword(email.getText().toString());
-            User.getUser().setFirstName(email.getText().toString());
-            User.getUser().setLastName(email.getText().toString());
-            User.getUser().setPhone(email.getText().toString());
-
+            if(password.getText().toString().equals(confirmPassword.getText().toString()))
+            {
+                User.getUser().setEmail(email.getText().toString());
+                User.getUser().setPassword(password.getText().toString());
+                User.getUser().setFirstName(firstName.getText().toString());
+                User.getUser().setLastName(lastName.getText().toString());
+                User.getUser().setPhone(phone.getText().toString());
+            }
             finish();
         }
     }
