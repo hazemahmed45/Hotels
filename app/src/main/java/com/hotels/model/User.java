@@ -26,10 +26,6 @@ public class User {
         return user;
     }
 
-    public static void setUser(User user) {
-        User.user = user;
-    }
-
     public String getFirstName() {
         return FirstName;
     }
@@ -74,7 +70,11 @@ public class User {
         return Points;
     }
 
-    public void setPoints(long points) {
-        Points = points;
+    public void addPoints(long points) {
+        if(Points=='\0')
+        {
+            Points=0;
+        }
+        Points+=points;
     }
 }

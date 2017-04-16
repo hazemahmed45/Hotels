@@ -17,7 +17,7 @@ public class NavigationHelper {
     }
     public static void LaunchSignInScreen(Activity activity)
     {
-        activity.startActivity(new Intent(activity, SignInScreen.class));
+        activity.startActivity(new Intent(activity,SignInScreen.class));
     }
     public static void LaunchSignUpScreen(Activity activity)
     {

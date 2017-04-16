@@ -1,4 +1,4 @@
-package com.hotels.features.main.activities.Splash;
+package com.hotels.features.main.activities.Activities.Splash;
 
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
