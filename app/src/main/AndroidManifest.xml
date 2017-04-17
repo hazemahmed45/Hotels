@@ -10,7 +10,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".features.main.activities.Activities.HomeScreen" />
         <activity android:name=".features.main.activities.Activities.Splash.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +19,8 @@
         </activity>
         <activity android:name=".features.main.activities.Login.LoginScreen" />
         <activity android:name=".features.main.activities.Login.SignInScreen" />
-        <activity android:name=".features.main.activities.Login.SignUpScreen"></activity>
+        <activity android:name=".features.main.activities.Login.SignUpScreen" />
+        <activity android:name=".features.main.activities.Activities.Splash.RoomScreen"></activity>
     </application>
 
 </manifest>

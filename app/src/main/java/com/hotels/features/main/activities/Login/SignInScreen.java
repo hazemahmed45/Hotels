@@ -4,10 +4,9 @@ import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.hotels.R;
-import com.hotels.base.NavigationHelper;
+import com.hotels.utils.NavigationHelper;
 import com.hotels.utils.StringUtil;
 
 import butterknife.BindView;

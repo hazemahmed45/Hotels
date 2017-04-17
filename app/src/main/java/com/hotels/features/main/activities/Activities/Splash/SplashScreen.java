@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.hotels.R;
-import com.hotels.base.NavigationHelper;
+import com.hotels.utils.NavigationHelper;
 
 public class SplashScreen extends AppCompatActivity {
 

@@ -3,34 +3,28 @@ package com.hotels.features.main.activities.Login;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
 import com.hotels.R;
 import com.hotels.base.BaseActivity;
-import com.hotels.base.HotelsApplication;
-import com.hotels.base.NavigationHelper;
+import com.hotels.utils.NavigationHelper;
 import com.hotels.features.main.activities.Fragments.HomeScreen;
 import com.hotels.features.main.activities.Fragments.LoginScreenFragment;
+import com.hotels.features.main.activities.Fragments.RoomsListView;
 import com.hotels.model.User;
 import com.hotels.utils.ColorUtil;
-import com.hotels.utils.StringUtil;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
-import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class LoginScreen extends BaseActivity {
 
@@ -106,6 +100,7 @@ public class LoginScreen extends BaseActivity {
                                 CheckForScreen(User.getUser());
 
                                 check= false;
+                                break;
                             }
                             case 1:
                             {
@@ -114,6 +109,16 @@ public class LoginScreen extends BaseActivity {
                                     NavigationHelper.LaunchSignInScreen(LoginScreen.this);
                                 }
                                 check=false;
+                                break;
+                            }
+                            case 4:
+                            {
+                                RoomsListView roomsListView=new RoomsListView();
+                                FragmentTransaction FT=getSupportFragmentManager().beginTransaction();
+                                FT.replace(R.id.FrameLayoutLoginScreen,roomsListView);
+                                FT.commit();
+                                check=false;
+                                break;
                             }
                         }
 

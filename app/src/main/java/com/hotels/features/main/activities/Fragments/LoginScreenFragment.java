@@ -1,17 +1,14 @@
 package com.hotels.features.main.activities.Fragments;
 
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.hotels.R;
-import com.hotels.base.NavigationHelper;
-import com.hotels.features.main.activities.Login.LoginScreen;
+import com.hotels.utils.NavigationHelper;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;

@@ -2,6 +2,10 @@ package com.hotels.base;
 
 import android.support.v4.app.Fragment;
 
+import com.hotels.model.Rooms;
+
+import java.util.ArrayList;
+
 /**
  * Created by ahmed on 13/04/17.
  */

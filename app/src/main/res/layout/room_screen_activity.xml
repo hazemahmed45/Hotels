@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hotels.features.main.activities.Activities.RoomScreen">
+
+    <ImageSwitcher
+        android:id="@+id/room_image_switcher"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="66dp" />
+
+    <TextView
+        android:id="@+id/room_name"
+        android:textColor="@color/MyColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/room_price"
+        android:textColor="@color/MyColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/room_luxory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/room_name"
+        android:layout_marginTop="17dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/room_capacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/room_luxory"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/room_desc"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/room_image_switcher"
+        android:layout_marginTop="35dp"
+        android:layout_toEndOf="@+id/room_luxory"
+        android:layout_toLeftOf="@+id/room_capacity"
+        android:layout_toRightOf="@+id/room_luxory"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/room_check_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/room_desc"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/room_desc"
+        android:text="@string/check_in" />
+
+    <Button
+        android:id="@+id/room_vr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/room_desc"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/room_desc"
+        android:text="@string/vr_view" />
+</RelativeLayout>
