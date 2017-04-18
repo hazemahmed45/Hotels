@@ -46,11 +46,9 @@ public class RoomsListView extends Fragment {
         rooms.add(new Rooms("hazem","120",2,"this room is spacious","comes with a pool"));
         rooms.get(rooms.size()-1).getRoomImage().add(BitmapFactory.decodeResource(HotelsApplication.get().getResources(),R.mipmap.ic_launcher));
         rooms.get(rooms.size()-1).getRoomImage().add(BitmapFactory.decodeResource(HotelsApplication.get().getResources(),R.drawable.listviewwithimage));
-        rooms.get(rooms.size()-1).getRoomImage().add(BitmapFactory.decodeResource(HotelsApplication.get().getResources(),R.drawable.progressbar
-        ));
+        rooms.get(rooms.size()-1).getRoomImage().add(BitmapFactory.decodeResource(HotelsApplication.get().getResources(),R.drawable.progressbar));
         rooms.add(new Rooms("hazem","120",2,"this room is spacious","comes with a pool"));
         rooms.add(new Rooms("hazem","120",2,"this room is spacious","comes with a pool"));
-        Toast.makeText(RoomsListView.this.getContext(), rooms.get(0).getRoomImage().size()+"", Toast.LENGTH_SHORT).show();
         adapter=new RoomAdapter(rooms,this.getContext().getApplicationContext(),this);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

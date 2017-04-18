@@ -2,6 +2,8 @@ package com.hotels.features.main.activities.Login;
 
 import android.os.Build;
 import android.support.annotation.RequiresApi;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -11,6 +13,7 @@ import android.widget.Toast;
 
 import com.hotels.R;
 import com.hotels.base.BaseActivity;
+import com.hotels.features.main.activities.Fragments.AboutUsFragment;
 import com.hotels.features.main.activities.Fragments.ContactUsFragment;
 import com.hotels.utils.NavigationHelper;
 import com.hotels.features.main.activities.Fragments.HomeScreen;
@@ -44,6 +47,7 @@ public class LoginScreen extends BaseActivity {
     }
 
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onResume() {
         super.onResume();
@@ -64,17 +68,13 @@ public class LoginScreen extends BaseActivity {
         if(user.getEmail()==null)
         {
             LoginScreenFragment fm=new LoginScreenFragment();
-            FragmentTransaction FT=getSupportFragmentManager().beginTransaction();
-            FT.replace(R.id.FrameLayoutLoginScreen,fm);
-            FT.commit();
+            LaunchFragment(fm);
 
         }
         else if(user.getEmail()!=null)
         {
             HomeScreen HS=new HomeScreen();
-            FragmentTransaction FT=getSupportFragmentManager().beginTransaction();
-            FT.replace(R.id.FrameLayoutLoginScreen,HS);
-            FT.commit();
+            LaunchFragment(HS);
         }
     }
     private void DrawerCreate()
@@ -117,18 +117,21 @@ public class LoginScreen extends BaseActivity {
                             case 4:
                             {
                                 RoomsListView roomsListView=new RoomsListView();
-                                FragmentTransaction FT=getSupportFragmentManager().beginTransaction();
-                                FT.replace(R.id.FrameLayoutLoginScreen,roomsListView);
-                                FT.commit();
+                                LaunchFragment(roomsListView);
                                 check=false;
                                 break;
                             }
                             case 7:
                             {
                                 ContactUsFragment CUF=new ContactUsFragment();
-                                FragmentTransaction FT=getSupportFragmentManager().beginTransaction();
-                                FT.replace(R.id.FrameLayoutLoginScreen,CUF);
-                                FT.commit();
+                                LaunchFragment(CUF);
+                                check=false;
+                                break;
+                            }
+                            case 8:
+                            {
+                                AboutUsFragment AUF=new AboutUsFragment();
+                                LaunchFragment(AUF);
                                 check=false;
                                 break;
                             }
@@ -197,19 +200,21 @@ public class LoginScreen extends BaseActivity {
                             case 5:
                             {
                                 RoomsListView roomsListView=new RoomsListView();
-                                FragmentTransaction FT=getSupportFragmentManager().beginTransaction();
-                                FT.replace(R.id.FrameLayoutLoginScreen,roomsListView);
-                                FT.commit();
+                                LaunchFragment(roomsListView);
                                 check=false;
                                 break;
                             }
                             case 8:
                             {
                                 ContactUsFragment CUF=new ContactUsFragment();
-                                FragmentTransaction FT=getSupportFragmentManager().beginTransaction();
-                                FT.replace(R.id.FrameLayoutLoginScreen,CUF);
-                                FT.commit();
+                                LaunchFragment(CUF);
                                 check=false;
+                                break;
+                            }
+                            case 9:
+                            {
+                                AboutUsFragment AUF=new AboutUsFragment();
+                                LaunchFragment(AUF);
                                 break;
                             }
                         }
@@ -220,5 +225,11 @@ public class LoginScreen extends BaseActivity {
                 })
                 .build();
 
+    }
+    private void LaunchFragment(Fragment fragment)
+    {
+        FragmentTransaction FT=getSupportFragmentManager().beginTransaction();
+        FT.replace(R.id.FrameLayoutLoginScreen,fragment);
+        FT.commit();
     }
 }
