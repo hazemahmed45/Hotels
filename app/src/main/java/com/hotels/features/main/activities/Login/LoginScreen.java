@@ -142,12 +142,13 @@ public class LoginScreen extends BaseActivity {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     private void DrawerCreateWithAccount()
     {
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
                 .addProfiles(
-                        new ProfileDrawerItem().withName(User.getUser().getEmail()).withEmail(User.getUser().getEmail()).withIcon(R.mipmap.ic_launcher)
+                        new ProfileDrawerItem().withName(User.getUser().getEmail()).withEmail(User.getUser().getEmail()).withIcon(R.mipmap.ic_launcher).withTextColor(ColorUtil.getColor(R.color.Black))
                 )
 //                .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
 //                    @Override

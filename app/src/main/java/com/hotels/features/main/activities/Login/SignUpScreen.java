@@ -35,7 +35,8 @@ public class SignUpScreen extends AppCompatActivity {
     /***********/
     @OnClick(R.id.user_signup_signup_button)void SignUpButtonClikcedThree()
     {
-        if(isEmptyConfirmPassword() || isEmptyEmail() || isEmptyFirstName() || isEmptyLastName() || isEmptyPassword() || isEmptyPhone())
+        boolean CP=isEmptyConfirmPassword(),E=isEmptyEmail(),FN=isEmptyFirstName(),LN=isEmptyLastName(),P=isEmptyPassword(),PH=isEmptyPhone();
+        if(CP && E && FN && LN && P && PH)
         {
             if(password.getText().toString().equals(confirmPassword.getText().toString()))
             {
@@ -44,8 +45,9 @@ public class SignUpScreen extends AppCompatActivity {
                 User.getUser().setFirstName(firstName.getText().toString());
                 User.getUser().setLastName(lastName.getText().toString());
                 User.getUser().setPhone(phone.getText().toString());
+                finish();
             }
-            finish();
+
         }
     }
 
@@ -126,6 +128,11 @@ public class SignUpScreen extends AppCompatActivity {
         if(confirmPassword.getText().toString().trim().isEmpty())
         {
             confirmPasswordLayout.setError(StringUtil.getStringRes(R.string.error_msgs));
+            return false;
+        }
+        else if(confirmPassword.getText().toString().trim().equals(password.getText().toString().trim())==false)
+        {
+            confirmPasswordLayout.setError(StringUtil.getStringRes(R.string.error_wrongpass));
             return false;
         }
         else
