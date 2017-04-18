@@ -7,9 +7,11 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.hotels.R;
 import com.hotels.base.BaseActivity;
+import com.hotels.features.main.activities.Fragments.ContactUsFragment;
 import com.hotels.utils.NavigationHelper;
 import com.hotels.features.main.activities.Fragments.HomeScreen;
 import com.hotels.features.main.activities.Fragments.LoginScreenFragment;
@@ -88,6 +90,7 @@ public class LoginScreen extends BaseActivity {
                 .addDrawerItems(primaryDrawerItem[5])
                 .addDrawerItems(primaryDrawerItem[6])
                 .addDrawerItems(primaryDrawerItem[7])
+                .addDrawerItems(primaryDrawerItem[8])
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @RequiresApi(api = Build.VERSION_CODES.M)
                     @Override
@@ -116,6 +119,15 @@ public class LoginScreen extends BaseActivity {
                                 RoomsListView roomsListView=new RoomsListView();
                                 FragmentTransaction FT=getSupportFragmentManager().beginTransaction();
                                 FT.replace(R.id.FrameLayoutLoginScreen,roomsListView);
+                                FT.commit();
+                                check=false;
+                                break;
+                            }
+                            case 7:
+                            {
+                                ContactUsFragment CUF=new ContactUsFragment();
+                                FragmentTransaction FT=getSupportFragmentManager().beginTransaction();
+                                FT.replace(R.id.FrameLayoutLoginScreen,CUF);
                                 FT.commit();
                                 check=false;
                                 break;
@@ -156,26 +168,48 @@ public class LoginScreen extends BaseActivity {
                 .addDrawerItems(primaryDrawerItem[5])
                 .addDrawerItems(primaryDrawerItem[6])
                 .addDrawerItems(primaryDrawerItem[7])
+                .addDrawerItems(primaryDrawerItem[8])
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @RequiresApi(api = Build.VERSION_CODES.M)
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         boolean check=true;
+                        Toast.makeText(LoginScreen.this, position+"", Toast.LENGTH_SHORT).show();
                         switch (position)
                         {
-                            case 0:
+                            case 1:
                             {
                                 CheckForScreen(User.getUser());
 
                                 check= false;
+                                break;
                             }
-                            case 1:
+                            case 2:
                             {
                                 if(User.getUser()==null)
                                 {
                                     NavigationHelper.LaunchSignInScreen(LoginScreen.this);
                                 }
                                 check=false;
+                                break;
+                            }
+                            case 5:
+                            {
+                                RoomsListView roomsListView=new RoomsListView();
+                                FragmentTransaction FT=getSupportFragmentManager().beginTransaction();
+                                FT.replace(R.id.FrameLayoutLoginScreen,roomsListView);
+                                FT.commit();
+                                check=false;
+                                break;
+                            }
+                            case 8:
+                            {
+                                ContactUsFragment CUF=new ContactUsFragment();
+                                FragmentTransaction FT=getSupportFragmentManager().beginTransaction();
+                                FT.replace(R.id.FrameLayoutLoginScreen,CUF);
+                                FT.commit();
+                                check=false;
+                                break;
                             }
                         }
 

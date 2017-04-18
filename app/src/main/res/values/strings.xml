@@ -10,6 +10,7 @@
     <string name="gallery">Gallery</string>
     <string name="booking">Booking</string>
     <string name="about_us">About us</string>
+    <string name="contact_us">Contact us</string>
     <string name="email_hint">Email</string>
     <string name="password_hint">Password</string>
     <string name="phone_hint">Phone Number</string>

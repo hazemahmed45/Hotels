@@ -20,7 +20,10 @@ public class BaseActivity extends AppCompatActivity {
                     new PrimaryDrawerItem().withIdentifier(5).withName(StringUtil.getStringRes(R.string.rooms)),
                     new PrimaryDrawerItem().withIdentifier(6).withName(StringUtil.getStringRes(R.string.gallery)),
                     new PrimaryDrawerItem().withIdentifier(7).withName(StringUtil.getStringRes(R.string.booking)),
-                    new PrimaryDrawerItem().withIdentifier(8).withName(StringUtil.getStringRes(R.string.about_us))
+                    new PrimaryDrawerItem().withIdentifier(8).withName(StringUtil.getStringRes(R.string.contact_us)),
+                    new PrimaryDrawerItem().withIdentifier(9).withName(StringUtil.getStringRes(R.string.about_us))
+
+
             };
     public static AccountHeader accountHead;
 }
