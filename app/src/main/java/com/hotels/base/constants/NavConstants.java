@@ -5,4 +5,5 @@ package com.hotels.base.constants;
  */
 /*Intents constants*/
 public class NavConstants {
+    public static final String RoomsBundleKey="RoomsKey";
 }

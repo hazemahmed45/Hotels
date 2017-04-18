@@ -2,26 +2,30 @@ package com.hotels.model;
 
 import android.graphics.Bitmap;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by Hazem on 4/17/2017.
  */
 
-public class Rooms {
+public class Rooms implements Serializable {
     private String name;
     private String price;
     private ArrayList<Bitmap> roomImage;
     private int capacity;
     private String desc;
+    private String luxory;
     private Bitmap PanoImage;
 
-    public Rooms(String name, String price, int capacity, String desc) {
+    public Rooms(String name, String price, int capacity, String desc,String luxory) {
         this.name = name;
         this.price = price;
         this.capacity = capacity;
         this.desc = desc;
+        this.luxory=luxory;
         roomImage=new ArrayList<>();
+
     }
 
     public String getName() {
@@ -70,5 +74,13 @@ public class Rooms {
 
     public void setPanoImage(Bitmap panoImage) {
         PanoImage = panoImage;
+    }
+
+    public String getLuxory() {
+        return luxory;
+    }
+
+    public void setLuxory(String luxory) {
+        this.luxory = luxory;
     }
 }

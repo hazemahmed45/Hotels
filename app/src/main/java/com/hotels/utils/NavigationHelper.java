@@ -3,7 +3,6 @@ package com.hotels.utils;
 import android.app.Activity;
 import android.content.Intent;
 
-import com.hotels.features.main.activities.Activities.RoomScreen;
 import com.hotels.features.main.activities.Login.LoginScreen;
 import com.hotels.features.main.activities.Login.SignInScreen;
 import com.hotels.features.main.activities.Login.SignUpScreen;
@@ -24,8 +23,5 @@ public class NavigationHelper {
     {
         activity.startActivity(new Intent(activity, SignUpScreen.class));
     }
-    public static void LaunchRoomsScreen(Activity activity)
-    {
-        activity.startActivity(new Intent(activity, RoomScreen.class));
-    }
+
 }
