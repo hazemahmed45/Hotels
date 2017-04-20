@@ -13,6 +13,7 @@ import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.hotels.R;
 import com.hotels.base.HotelsApplication;
 
 import java.io.UnsupportedEncodingException;
@@ -33,7 +34,6 @@ public abstract class StringUtil {
     public static String getStringRes(@StringRes int stringRes) {
         return HotelsApplication.get().getString(stringRes);
     }
-
     public static String getStringRes(@StringRes int stringRes, Object... formatArgs) {
         return HotelsApplication.get().getString(stringRes, formatArgs);
     }
@@ -42,11 +42,15 @@ public abstract class StringUtil {
         return src.replace("link", link);
     }
 
-
+//    public static String [] getStringArrayRes(@StringRes int stringArrayRes)
+//    {
+//        return HotelsApplication.get().getResources().getStringArray(stringArrayRes);
+//    }
     public static boolean isValidEmail(String email) {
         Pattern p = Pattern.compile(".+@.+\\.[a-z]+");
         Matcher m = p.matcher(email);
         return m.matches();
+
     }
 
     public static boolean isEmpty(String value) {

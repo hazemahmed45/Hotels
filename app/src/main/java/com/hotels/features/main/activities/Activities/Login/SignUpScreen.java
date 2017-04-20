@@ -1,11 +1,9 @@
-package com.hotels.features.main.activities.Login;
+package com.hotels.features.main.activities.Activities.Login;
 
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.hotels.R;
 import com.hotels.model.User;

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hotels.features.main.activities.Login.LoginScreen">
+    tools:context=".features.main.activities.Activities.Login.LoginScreen">
 
     <AdapterViewFlipper
         android:id="@+id/room_image_flipper"

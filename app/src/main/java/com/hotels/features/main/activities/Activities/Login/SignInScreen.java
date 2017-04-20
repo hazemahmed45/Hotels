@@ -1,4 +1,4 @@
-package com.hotels.features.main.activities.Login;
+package com.hotels.features.main.activities.Activities.Login;
 
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
