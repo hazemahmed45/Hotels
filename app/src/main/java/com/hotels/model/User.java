@@ -11,6 +11,8 @@ public class User {
     private String Password;
     private String Phone;
     private long Points;
+    private int Stays;
+    private int Nights;
     private static User user;
 
     public User()
@@ -76,5 +78,29 @@ public class User {
             Points=0;
         }
         Points+=points;
+    }
+
+    public int getStays() {
+        return Stays;
+    }
+
+    public void addStays(int stays) {
+        if(Stays=='\0')
+        {
+            Stays=0;
+        }
+        Stays+=stays;
+    }
+
+    public int getNights() {
+        return Nights;
+    }
+
+    public void addNights(int nights) {
+        if(nights=='\0')
+        {
+            nights=0;
+        }
+        Nights+=nights;
     }
 }
