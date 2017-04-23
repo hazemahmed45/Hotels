@@ -13,18 +13,18 @@ public class AccountViewPagerAdapter extends FragmentPagerAdapter {
     public AccountViewPagerAdapter(FragmentManager fm) {
         super(fm);
     }
-
+    //private static AccountViewPagerAdapter
     @Override
     public Fragment getItem(int i) {
         switch (i)
         {
             case 0:
             {
-                return new AccountPointSystemFragment();
+                return AccountPointSystemFragment.getInstance();
             }
             case 1:
             {
-                return new AccountEditAccountFragment();
+                return AccountEditAccountFragment.getInstance();
             }
         }
         return null;

@@ -27,8 +27,8 @@ public class HotelViewPagerFragment extends Fragment {
         // Required empty public constructor
     }
 
-    @BindView(R.id.hotel_image)ImageView HotelImage;
-    @BindView(R.id.hotel_name)TextView HotelName;
+    @BindView(R.id.hotel_image)public ImageView HotelImage;
+    @BindView(R.id.hotel_name)public TextView HotelName;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

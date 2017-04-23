@@ -3,9 +3,11 @@ package com.hotels.features.main.activities.Activities.Login;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
@@ -234,12 +236,13 @@ public class LoginScreen extends BaseActivity {
                                 }
                                 else
                                 {
-                                    AccountViewPagerFragment AVPF=new AccountViewPagerFragment();
+                                    AccountViewPagerFragment AVPF=AccountViewPagerFragment.getInstance();
                                     NavigationHelper.LaunchFragment(AVPF,getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
                                 }
                                 check=false;
                                 break;
                             }
+
                             case 3:
                             {
                                 if(User.getUser().getEmail()==null)
@@ -248,7 +251,7 @@ public class LoginScreen extends BaseActivity {
                                 }
                                 else
                                 {
-                                    AccountViewPagerFragment AVPF=new AccountViewPagerFragment();
+                                    AccountViewPagerFragment AVPF=AccountViewPagerFragment.getInstance();
                                     NavigationHelper.LaunchFragment(AVPF,getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
                                 }
                                 check=false;
@@ -303,6 +306,12 @@ public class LoginScreen extends BaseActivity {
                 .build();
 
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
     private void LaunchFragment(Fragment fragment)
     {
         FragmentTransaction FT=getSupportFragmentManager().beginTransaction();

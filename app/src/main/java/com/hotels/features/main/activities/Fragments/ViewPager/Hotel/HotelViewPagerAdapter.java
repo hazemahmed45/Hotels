@@ -36,10 +36,6 @@ public class HotelViewPagerAdapter extends FragmentPagerAdapter {
                 ByteArrayOutputStream baos=new  ByteArrayOutputStream();
                 Bit.get(index).compress(Bitmap.CompressFormat.PNG,100, baos);
                 byte [] b=baos.toByteArray();
-//                int bytesNumber=Bit.get(index).getAllocationByteCount();
-//                ByteBuffer buffer=ByteBuffer.allocate(bytesNumber);
-//                Bit.get(index).copyPixelsFromBuffer(buffer);
-//                byte[] bytes=buffer.array();
                 bundle.putByteArray(PrefConstants.ViewPagerImageKey,b);
                 bundle.putString(PrefConstants.ViewPagerStringKey,Names.get(index));
                 VPF.setArguments(bundle);

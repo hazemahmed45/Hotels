@@ -10,10 +10,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.hotels.R;
 import com.hotels.base.HotelsApplication;
 import com.hotels.features.main.activities.Fragments.ViewPager.Hotel.HotelViewPagerAdapter;
+import com.hotels.features.main.activities.Fragments.ViewPager.Hotel.HotelViewPagerFragment;
 import com.hotels.utils.StringUtil;
 
 import java.util.ArrayList;
@@ -49,8 +51,9 @@ public class HotelsScreen extends Fragment {
         Names.add("Hotel 2");
         Names.add("Hotel 3");
 
-        HotelViewPagerAdapter adapter=new HotelViewPagerAdapter(this.getFragmentManager(), bitmaps , Names );
+        final HotelViewPagerAdapter adapter=new HotelViewPagerAdapter(this.getChildFragmentManager(), bitmaps , Names );
         viewPager.setAdapter(adapter);
+
         return view;
     }
 

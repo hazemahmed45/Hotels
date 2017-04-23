@@ -22,12 +22,13 @@ public class SignInScreen extends AppCompatActivity {
     @OnClick(R.id.user_signin_signup_button)void SignUpButtonClickedTwo()
     {
         NavigationHelper.LaunchSignUpScreen(SignInScreen.this);
+        finish();
     }
     @OnClick(R.id.user_signin_signin_button)void SigninButtonClickedTwo()
     {
         if(isValidEmail() || isValidPassword())
         {
-            NavigationHelper.LaunchSignInScreen(SignInScreen.this);
+            NavigationHelper.launchLoginScreen(SignInScreen.this);
         }
 
     }

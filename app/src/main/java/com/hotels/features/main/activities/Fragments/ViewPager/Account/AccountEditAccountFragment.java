@@ -27,7 +27,15 @@ public class AccountEditAccountFragment extends Fragment {
     public AccountEditAccountFragment() {
         // Required empty public constructor
     }
-
+    private static AccountEditAccountFragment accountEditAccountFragment;
+    public static AccountEditAccountFragment getInstance()
+    {
+        if(accountEditAccountFragment==null)
+        {
+            accountEditAccountFragment=new AccountEditAccountFragment();
+        }
+        return accountEditAccountFragment;
+    }
     @BindView(R.id.userinfo_firstname)EditText firstname;
     @BindView(R.id.userinfo_lastname)EditText lastname;
     @BindView(R.id.userinfo_phone)EditText phone;
@@ -51,6 +59,8 @@ public class AccountEditAccountFragment extends Fragment {
             Toast.makeText(this.getContext(), "Saved", Toast.LENGTH_SHORT).show();
         }
     }
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -63,6 +73,9 @@ public class AccountEditAccountFragment extends Fragment {
         phone.setText(User.getUser().getPhone());
         return view;
     }
+
+
+
     private boolean isEmptyFirstName()
     {
         if(firstname.getText().toString().trim().isEmpty())

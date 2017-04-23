@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.widget.Toast;
 
 import com.hotels.features.main.activities.Activities.Login.LoginScreen;
 import com.hotels.features.main.activities.Activities.Login.SignInScreen;
@@ -27,10 +28,11 @@ public class NavigationHelper {
     {
         activity.startActivity(new Intent(activity, SignUpScreen.class));
     }
-    public static void LaunchFragment(Fragment fragment, FragmentManager fragmentManager, int ResLayout)
+    public static void LaunchFragment(final Fragment fragment, final FragmentManager fragmentManager, int ResLayout)
     {
         FragmentTransaction FT=fragmentManager.beginTransaction();
         FT.replace(ResLayout,fragment);
+        FT.addToBackStack(null);
         FT.commit();
     }
     public static void LaunchFragment(Fragment fragment, FragmentManager fragmentManager, int ResLayout, Bundle bundle)
@@ -38,6 +40,7 @@ public class NavigationHelper {
         FragmentTransaction FT=fragmentManager.beginTransaction();
         FT.replace(ResLayout,fragment);
         fragment.setArguments(bundle);
+        FT.addToBackStack(null);
         FT.commit();
     }
 }
