@@ -2,6 +2,9 @@ package com.hotels.base;
 
 import android.app.Application;
 
+import com.hotels.R;
+import com.hotels.utils.StringUtil;
+
 /**
  * Created by ahmed on 12/04/17.
  */

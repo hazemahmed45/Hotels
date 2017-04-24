@@ -32,7 +32,7 @@ public class NavigationHelper {
     {
         FragmentTransaction FT=fragmentManager.beginTransaction();
         FT.replace(ResLayout,fragment);
-        FT.addToBackStack(null);
+        //FT.addToBackStack(null);
         FT.commit();
     }
     public static void LaunchFragment(Fragment fragment, FragmentManager fragmentManager, int ResLayout, Bundle bundle)
@@ -40,7 +40,7 @@ public class NavigationHelper {
         FragmentTransaction FT=fragmentManager.beginTransaction();
         FT.replace(ResLayout,fragment);
         fragment.setArguments(bundle);
-        FT.addToBackStack(null);
+        //FT.addToBackStack(null);
         FT.commit();
     }
 }

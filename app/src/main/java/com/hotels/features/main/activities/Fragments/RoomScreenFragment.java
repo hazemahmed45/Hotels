@@ -76,25 +76,13 @@ public class RoomScreenFragment extends Fragment {
 
         Flipper.setFlipInterval(2000);
         Flipper.setAutoStart(true);
-//        Flipper.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                Flipper.showNext();
-//            }
-//        });
 
         return view;
     }
-//    private ImageView GetImageView(int index)
-//    {
-//        if(index<room.getRoomImage().size())
-//        {
-//            ImageView RoomView=new ImageView(RoomScreenFragment.this.getContext());
-//            RoomView.setScaleType(ImageView.ScaleType.FIT_CENTER);
-//            RoomView.setLayoutParams(new ImageSwitcher.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewPager.LayoutParams.MATCH_PARENT));
-//            RoomView.setImageBitmap(room.getRoomImage().get(index));
-//            return RoomView;
-//        }
-//        return null;
-//    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Flipper.stopFlipping();
+    }
 }

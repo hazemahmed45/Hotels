@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.hotels.R;
+import com.hotels.base.BaseFragment;
 import com.hotels.model.User;
 import com.hotels.utils.StringUtil;
 
@@ -19,7 +20,7 @@ import butterknife.OnClick;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeScreen extends Fragment {
+public class HomeScreen extends BaseFragment {
 
     public HomeScreen() {
         // Required empty public constructor

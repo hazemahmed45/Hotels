@@ -15,7 +15,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="66dp" />
 
-    <TextView
+    <com.hotels.base.customuicomponents.HotelBoldTextView
         android:id="@+id/room_name"
         android:textColor="@color/MyColor"
         android:layout_width="wrap_content"
@@ -25,7 +25,7 @@
         android:layout_alignParentTop="true"
         android:text="TextView" />
 
-    <TextView
+    <com.hotels.base.customuicomponents.HotelBoldTextView
         android:id="@+id/room_price"
         android:textColor="@color/MyColor"
         android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
         android:layout_alignParentTop="true"
         android:text="TextView" />
 
-    <TextView
+    <com.hotels.base.customuicomponents.HotelsTextView
         android:id="@+id/room_luxory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
         android:layout_marginTop="17dp"
         android:text="TextView" />
 
-    <TextView
+    <com.hotels.base.customuicomponents.HotelsTextView
         android:id="@+id/room_capacity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <TextView
+            <com.hotels.base.customuicomponents.HotelsTextView
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
@@ -76,7 +76,7 @@
         </RelativeLayout>
     </ScrollView>
 
-    <Button
+    <com.hotels.base.customuicomponents.HotelButton
         android:id="@+id/room_check_in"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -85,7 +85,7 @@
         android:layout_alignStart="@+id/TextScrollView"
         android:text="@string/check_in" />
 
-    <Button
+    <com.hotels.base.customuicomponents.HotelButton
         android:id="@+id/room_vr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

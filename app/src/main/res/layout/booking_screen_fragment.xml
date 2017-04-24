@@ -7,7 +7,7 @@
     <!-- TODO: Update blank fragment layout -->
 
 
-    <EditText
+    <com.hotels.base.customuicomponents.HotelEditText
         android:id="@+id/booking_checkin_edittext"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignEnd="@+id/booking_room_spinner" />
 
-    <TextView
+    <com.hotels.base.customuicomponents.HotelsTextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
         android:layout_above="@+id/booking_checkout_edittext"
         android:layout_alignParentStart="true" />
 
-    <EditText
+    <com.hotels.base.customuicomponents.HotelEditText
         android:id="@+id/booking_checkout_edittext"
         android:layout_width="100dp"
         android:focusable="false"
@@ -34,7 +34,7 @@
         android:layout_below="@+id/booking_checkin_edittext"
         android:layout_alignStart="@+id/booking_checkin_edittext" />
 
-    <TextView
+    <com.hotels.base.customuicomponents.HotelsTextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
         android:layout_marginBottom="51dp"
         android:layout_marginEnd="41dp" />
 
-    <TextView
+    <com.hotels.base.customuicomponents.HotelsTextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
         android:layout_alignStart="@+id/textView4"
         android:text="Room:" />
 
-    <TextView
+    <com.hotels.base.customuicomponents.HotelsTextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
         android:layout_below="@+id/booking_adult_spinner"
         android:layout_alignStart="@+id/booking_adult_spinner" />
 
-    <TextView
+    <com.hotels.base.customuicomponents.HotelsTextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -91,7 +91,7 @@
         android:layout_alignStart="@+id/textView7"
         android:text="Child:" />
 
-    <CheckBox
+    <com.hotels.base.customuicomponents.HotelCheckBox
         android:id="@+id/booking_using_points"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -100,7 +100,7 @@
         android:layout_below="@+id/textView8"
         android:layout_alignStart="@+id/textView8" />
 
-    <TextView
+    <com.hotels.base.customuicomponents.HotelsTextView
         android:id="@+id/booking_points_system"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -110,7 +110,7 @@
         android:layout_alignStart="@+id/booking_using_points"
         android:layout_marginTop="18dp" />
 
-    <Button
+    <com.hotels.base.customuicomponents.HotelButton
         android:id="@+id/booking_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

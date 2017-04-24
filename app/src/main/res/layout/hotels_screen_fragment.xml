@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
+            <com.hotels.base.customuicomponents.HotelsTextView
                 android:id="@+id/hotels_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

@@ -6,9 +6,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
+import android.transition.Slide;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,19 +43,20 @@ import butterknife.ButterKnife;
 public class LoginScreen extends BaseActivity {
 
     Drawer drawer;
-    @BindView(R.id.login_toolbar) Toolbar toolbar;
+    @BindView(R.id.login_toolbar) public Toolbar toolbar;
+
     @BindView(R.id.toolbar_context_name)TextView ContextName;
     @BindView(R.id.FrameLayoutLoginScreen)FrameLayout frameLayout;
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_screen_activity);
         ButterKnife.bind(LoginScreen.this);
+        setSupportActionBar(toolbar);
         CheckForScreen(User.getUser());
-
-
+        //setupWindowAnimations();
     }
-
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -61,7 +66,14 @@ public class LoginScreen extends BaseActivity {
         DrawerCreateWithAccount();
 
         CheckForScreen(User.getUser());
+
     }
+//    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+//    private void setupWindowAnimations() {
+//        Slide slide = new Slide();
+//        slide.setDuration(1000);
+//        getWindow().setExitTransition(slide);
+//    }
 
     private void CheckForScreen(User user)
     {
@@ -233,6 +245,7 @@ public class LoginScreen extends BaseActivity {
                                 if(User.getUser().getEmail()==null)
                                 {
                                     NavigationHelper.LaunchSignInScreen(LoginScreen.this);
+
                                 }
                                 else
                                 {
@@ -263,6 +276,7 @@ public class LoginScreen extends BaseActivity {
                                 NavigationHelper.LaunchFragment(HS,getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
                                 ContextName.setText("Hotels");
                                 check=false;
+                                //setupWindowAnimations();
                                 break;
                             }
                             case 5:
@@ -319,4 +333,5 @@ public class LoginScreen extends BaseActivity {
         FT.addToBackStack(null);
         FT.commit();
     }
+
 }

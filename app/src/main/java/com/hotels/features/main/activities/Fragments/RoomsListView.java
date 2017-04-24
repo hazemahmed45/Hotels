@@ -5,6 +5,9 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,9 +15,13 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.github.ksoichiro.android.observablescrollview.ObservableListView;
+import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
+import com.github.ksoichiro.android.observablescrollview.ScrollState;
 import com.hotels.R;
 import com.hotels.base.HotelsApplication;
 import com.hotels.base.constants.NavConstants;
+import com.hotels.features.main.activities.Activities.Login.LoginScreen;
 import com.hotels.features.main.activities.RoomAdapter.RoomAdapter;
 import com.hotels.model.Rooms;
 
@@ -33,7 +40,7 @@ public class RoomsListView extends Fragment {
         // Required empty public constructor
     }
 
-    @BindView(R.id.rooms_listview)ListView listView;
+    @BindView(R.id.rooms_listview)ObservableListView listView;
     RoomAdapter adapter;
     ArrayList<Rooms>rooms;
     @Override
@@ -42,6 +49,31 @@ public class RoomsListView extends Fragment {
         View view=inflater.inflate(R.layout.rooms_list_view_fragment, container, false);
         ButterKnife.bind(this,view);
 
+        listView.setScrollViewCallbacks(new ObservableScrollViewCallbacks() {
+            @Override
+            public void onScrollChanged(int scrollY, boolean firstScroll, boolean dragging) {
+
+            }
+
+            @Override
+            public void onDownMotionEvent() {
+
+            }
+
+            @Override
+            public void onUpOrCancelMotionEvent(ScrollState scrollState) {
+
+                if (scrollState == ScrollState.UP) {
+                    if (((AppCompatActivity)RoomsListView.this.getActivity()).getSupportActionBar().isShowing()) {
+                        ((AppCompatActivity)RoomsListView.this.getActivity()).getSupportActionBar().hide();
+                    }
+                } else if (scrollState == ScrollState.DOWN) {
+                    if (!(((AppCompatActivity)RoomsListView.this.getActivity()).getSupportActionBar().isShowing())) {
+                        ((AppCompatActivity)RoomsListView.this.getActivity()).getSupportActionBar().show();
+                    }
+                }
+            }
+        });
         rooms=new ArrayList<>();
         rooms.add(new Rooms("Deluxe Double Bedroom","145",2,"Apartment Size: 24 m²\n" +
                 "\n" +
@@ -97,4 +129,9 @@ public class RoomsListView extends Fragment {
         return view;
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        ((AppCompatActivity)RoomsListView.this.getActivity()).getSupportActionBar().show();
+    }
 }
