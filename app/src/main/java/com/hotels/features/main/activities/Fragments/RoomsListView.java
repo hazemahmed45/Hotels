@@ -93,6 +93,7 @@ public class RoomsListView extends Fragment {
                 FT.commit();
             }
         });
+
         return view;
     }
 

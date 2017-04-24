@@ -8,7 +8,6 @@ import android.app.Application;
 
 public class HotelsApplication extends Application {
 
-
     private static HotelsApplication mInstance;
 
     @Override

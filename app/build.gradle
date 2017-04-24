@@ -21,6 +21,7 @@ android {
 
 repositories {
     mavenCentral()
+    jcenter()
     maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
     maven {
         url "https://jitpack.io"
@@ -47,6 +48,8 @@ dependencies {
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.daimajia.slider:library:1.1.5@aar'
     compile 'com.github.Triggertrap:SeekArc:v1.1'
+    compile 'com.mcxiaoke.volley:library-aar:1.0.0'
     testCompile 'junit:junit:4.12'
+    compile 'io.saeid:fab-loading:1.0.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
 }

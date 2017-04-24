@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.EditText;
 
 import com.hotels.R;
+import com.hotels.base.HotelsApplication;
 import com.hotels.utils.NavigationHelper;
 import com.hotels.utils.StringUtil;
 
@@ -23,6 +24,7 @@ public class SignInScreen extends AppCompatActivity {
     {
         NavigationHelper.LaunchSignUpScreen(SignInScreen.this);
         finish();
+
     }
     @OnClick(R.id.user_signin_signin_button)void SigninButtonClickedTwo()
     {

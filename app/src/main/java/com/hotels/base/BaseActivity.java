@@ -25,5 +25,4 @@ public class BaseActivity extends AppCompatActivity {
 
 
             };
-    public static AccountHeader accountHead;
 }
