@@ -1,6 +1,7 @@
 package com.hotels.features.main.activities.Fragments;
 
 
+import android.animation.Animator;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,6 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -37,43 +40,6 @@ public class RoomsListView extends Fragment {
 
 
     public RoomsListView() {
-        // Required empty public constructor
-    }
-
-    @BindView(R.id.rooms_listview)ObservableListView listView;
-    RoomAdapter adapter;
-    ArrayList<Rooms>rooms;
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.rooms_list_view_fragment, container, false);
-        ButterKnife.bind(this,view);
-
-        listView.setScrollViewCallbacks(new ObservableScrollViewCallbacks() {
-            @Override
-            public void onScrollChanged(int scrollY, boolean firstScroll, boolean dragging) {
-
-            }
-
-            @Override
-            public void onDownMotionEvent() {
-
-            }
-
-            @Override
-            public void onUpOrCancelMotionEvent(ScrollState scrollState) {
-
-                if (scrollState == ScrollState.UP) {
-                    if (((AppCompatActivity)RoomsListView.this.getActivity()).getSupportActionBar().isShowing()) {
-                        ((AppCompatActivity)RoomsListView.this.getActivity()).getSupportActionBar().hide();
-                    }
-                } else if (scrollState == ScrollState.DOWN) {
-                    if (!(((AppCompatActivity)RoomsListView.this.getActivity()).getSupportActionBar().isShowing())) {
-                        ((AppCompatActivity)RoomsListView.this.getActivity()).getSupportActionBar().show();
-                    }
-                }
-            }
-        });
         rooms=new ArrayList<>();
         rooms.add(new Rooms("Deluxe Double Bedroom","145",2,"Apartment Size: 24 m²\n" +
                 "\n" +
@@ -111,6 +77,103 @@ public class RoomsListView extends Fragment {
         rooms.get(rooms.size()-1).getRoomImage().add(BitmapFactory.decodeResource(HotelsApplication.get().getResources(),R.drawable.listviewwithimage));
         rooms.get(rooms.size()-1).getRoomImage().add(BitmapFactory.decodeResource(HotelsApplication.get().getResources(),R.drawable.progressbar));
 
+        rooms.add(new Rooms("Royal suite","1,500",5,"Private bathroom\n" +
+                "\n" +
+                "Room Size: 60 m²\n" +
+                "\n" +
+                "Featuring a modern design and free Wi-Fi, this spacious, air-conditioned suite has a bedroom and 2 flat-screen satellite TVs. It offers a kitchenette, dining area and living room. A bath and shower are fitted in the private bathroom.\n" +
+                "\n" +
+                "Room Facilities: Safe, Air conditioning, Iron, Ironing facilities, Sitting area, Walk-in closet, Carpeted, Sofa, Hardwood/Parquet floors, Wardrobe/Closet, Shower, Bathtub, Hairdryer, Bathrobe, Free toiletries, Toilet, Bathroom, Slippers, TV, Telephone, Satellite channels, Cable channels, Minibar, Refrigerator, Microwave, Kitchen, Dining area, Electric kettle, Kitchenware, Oven, Stovetop, Wake-up service, Alarm clock\n" +
+                "\n" +
+                "Free WiFi is available in all rooms.\n","Pool & Jacuzzi Suite"));
+        rooms.get(rooms.size()-1).getRoomImage().add(BitmapFactory.decodeResource(HotelsApplication.get().getResources(),R.mipmap.ic_launcher));
+        rooms.get(rooms.size()-1).getRoomImage().add(BitmapFactory.decodeResource(HotelsApplication.get().getResources(),R.drawable.listviewwithimage));
+        rooms.get(rooms.size()-1).getRoomImage().add(BitmapFactory.decodeResource(HotelsApplication.get().getResources(),R.drawable.progressbar));
+
+        rooms.add(new Rooms("Royal suite","1,500",5,"Private bathroom\n" +
+                "\n" +
+                "Room Size: 60 m²\n" +
+                "\n" +
+                "Featuring a modern design and free Wi-Fi, this spacious, air-conditioned suite has a bedroom and 2 flat-screen satellite TVs. It offers a kitchenette, dining area and living room. A bath and shower are fitted in the private bathroom.\n" +
+                "\n" +
+                "Room Facilities: Safe, Air conditioning, Iron, Ironing facilities, Sitting area, Walk-in closet, Carpeted, Sofa, Hardwood/Parquet floors, Wardrobe/Closet, Shower, Bathtub, Hairdryer, Bathrobe, Free toiletries, Toilet, Bathroom, Slippers, TV, Telephone, Satellite channels, Cable channels, Minibar, Refrigerator, Microwave, Kitchen, Dining area, Electric kettle, Kitchenware, Oven, Stovetop, Wake-up service, Alarm clock\n" +
+                "\n" +
+                "Free WiFi is available in all rooms.\n","Pool & Jacuzzi Suite"));
+        rooms.get(rooms.size()-1).getRoomImage().add(BitmapFactory.decodeResource(HotelsApplication.get().getResources(),R.mipmap.ic_launcher));
+        rooms.get(rooms.size()-1).getRoomImage().add(BitmapFactory.decodeResource(HotelsApplication.get().getResources(),R.drawable.listviewwithimage));
+        rooms.get(rooms.size()-1).getRoomImage().add(BitmapFactory.decodeResource(HotelsApplication.get().getResources(),R.drawable.progressbar));
+
+        rooms.add(new Rooms("Royal suite","1,500",5,"Private bathroom\n" +
+                "\n" +
+                "Room Size: 60 m²\n" +
+                "\n" +
+                "Featuring a modern design and free Wi-Fi, this spacious, air-conditioned suite has a bedroom and 2 flat-screen satellite TVs. It offers a kitchenette, dining area and living room. A bath and shower are fitted in the private bathroom.\n" +
+                "\n" +
+                "Room Facilities: Safe, Air conditioning, Iron, Ironing facilities, Sitting area, Walk-in closet, Carpeted, Sofa, Hardwood/Parquet floors, Wardrobe/Closet, Shower, Bathtub, Hairdryer, Bathrobe, Free toiletries, Toilet, Bathroom, Slippers, TV, Telephone, Satellite channels, Cable channels, Minibar, Refrigerator, Microwave, Kitchen, Dining area, Electric kettle, Kitchenware, Oven, Stovetop, Wake-up service, Alarm clock\n" +
+                "\n" +
+                "Free WiFi is available in all rooms.\n","Pool & Jacuzzi Suite"));
+        rooms.get(rooms.size()-1).getRoomImage().add(BitmapFactory.decodeResource(HotelsApplication.get().getResources(),R.mipmap.ic_launcher));
+        rooms.get(rooms.size()-1).getRoomImage().add(BitmapFactory.decodeResource(HotelsApplication.get().getResources(),R.drawable.listviewwithimage));
+        rooms.get(rooms.size()-1).getRoomImage().add(BitmapFactory.decodeResource(HotelsApplication.get().getResources(),R.drawable.progressbar));
+
+        rooms.add(new Rooms("Royal suite","1,500",5,"Private bathroom\n" +
+                "\n" +
+                "Room Size: 60 m²\n" +
+                "\n" +
+                "Featuring a modern design and free Wi-Fi, this spacious, air-conditioned suite has a bedroom and 2 flat-screen satellite TVs. It offers a kitchenette, dining area and living room. A bath and shower are fitted in the private bathroom.\n" +
+                "\n" +
+                "Room Facilities: Safe, Air conditioning, Iron, Ironing facilities, Sitting area, Walk-in closet, Carpeted, Sofa, Hardwood/Parquet floors, Wardrobe/Closet, Shower, Bathtub, Hairdryer, Bathrobe, Free toiletries, Toilet, Bathroom, Slippers, TV, Telephone, Satellite channels, Cable channels, Minibar, Refrigerator, Microwave, Kitchen, Dining area, Electric kettle, Kitchenware, Oven, Stovetop, Wake-up service, Alarm clock\n" +
+                "\n" +
+                "Free WiFi is available in all rooms.\n","Pool & Jacuzzi Suite"));
+        rooms.get(rooms.size()-1).getRoomImage().add(BitmapFactory.decodeResource(HotelsApplication.get().getResources(),R.mipmap.ic_launcher));
+        rooms.get(rooms.size()-1).getRoomImage().add(BitmapFactory.decodeResource(HotelsApplication.get().getResources(),R.drawable.listviewwithimage));
+        rooms.get(rooms.size()-1).getRoomImage().add(BitmapFactory.decodeResource(HotelsApplication.get().getResources(),R.drawable.progressbar));
+
+    }
+
+    @BindView(R.id.rooms_listview)ObservableListView listView;
+    RoomAdapter adapter;
+    ArrayList<Rooms>rooms;
+    Toolbar toolbar;
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view=inflater.inflate(R.layout.rooms_list_view_fragment, container, false);
+        ButterKnife.bind(this,view);
+        toolbar= (Toolbar) this.getActivity().findViewById(R.id.login_toolbar);
+        listView.setScrollViewCallbacks(new ObservableScrollViewCallbacks() {
+            @Override
+            public void onScrollChanged(int scrollY, boolean firstScroll, boolean dragging) {
+
+            }
+
+            @Override
+            public void onDownMotionEvent() {
+
+            }
+
+            @Override
+            public void onUpOrCancelMotionEvent(ScrollState scrollState) {
+
+                if (scrollState == ScrollState.UP) {
+
+                    if (toolbar.getVisibility()==View.VISIBLE) {
+
+                        toolbar.animate().translationY(-toolbar.getBottom()).setInterpolator(new AccelerateInterpolator()).start();
+                        toolbar.setVisibility(View.GONE);
+
+
+                    }
+                } else if (scrollState == ScrollState.DOWN) {
+                    if (toolbar.getVisibility()==View.GONE) {
+                        toolbar.setVisibility(View.VISIBLE);
+                        toolbar.animate().translationY(0).setInterpolator(new DecelerateInterpolator()).start();
+
+                    }
+                }
+            }
+        });
+
         adapter=new RoomAdapter(rooms,this.getContext().getApplicationContext(),this);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -133,5 +196,9 @@ public class RoomsListView extends Fragment {
     public void onPause() {
         super.onPause();
         ((AppCompatActivity)RoomsListView.this.getActivity()).getSupportActionBar().show();
+    }
+    private void setAdapter(RoomAdapter adapter)
+    {
+
     }
 }

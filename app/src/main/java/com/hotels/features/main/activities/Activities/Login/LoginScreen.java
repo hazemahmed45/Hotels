@@ -45,7 +45,7 @@ public class LoginScreen extends BaseActivity {
     Drawer drawer;
     @BindView(R.id.login_toolbar) public Toolbar toolbar;
 
-    @BindView(R.id.toolbar_context_name)TextView ContextName;
+    //@BindView(R.id.toolbar_context_name)TextView ContextName;
     @BindView(R.id.FrameLayoutLoginScreen)FrameLayout frameLayout;
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -54,7 +54,7 @@ public class LoginScreen extends BaseActivity {
         setContentView(R.layout.login_screen_activity);
         ButterKnife.bind(LoginScreen.this);
         setSupportActionBar(toolbar);
-        CheckForScreen(User.getUser());
+        getSupportActionBar().setTitle("Home");
         //setupWindowAnimations();
     }
 
@@ -65,119 +65,11 @@ public class LoginScreen extends BaseActivity {
 
         DrawerCreateWithAccount();
 
-        CheckForScreen(User.getUser());
+        LaunchFragment(new RoomsListView());
 
     }
-//    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-//    private void setupWindowAnimations() {
-//        Slide slide = new Slide();
-//        slide.setDuration(1000);
-//        getWindow().setExitTransition(slide);
-//    }
 
-    private void CheckForScreen(User user)
-    {
-        //Toast.makeText(this, user.getEmail(), Toast.LENGTH_SHORT).show();
-        if(user.getEmail()==null)
-        {
-            LoginScreenFragment fm=new LoginScreenFragment();
-            NavigationHelper.LaunchFragment(fm,getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
 
-        }
-        else if(user.getEmail()!=null)
-        {
-            HomeScreen HS=new HomeScreen();
-            NavigationHelper.LaunchFragment(HS,getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
-        }
-        ContextName.setText("Home");
-    }
-
-//    private void DrawerCreate()
-//    {
-//        drawer=new DrawerBuilder()
-//                .withActivity(LoginScreen.this)
-//                .withToolbar(toolbar)
-//                .addDrawerItems(primaryDrawerItem[0])
-//                .addDrawerItems(primaryDrawerItem[1])
-//                .addDrawerItems(primaryDrawerItem[2])
-//                .addDrawerItems(primaryDrawerItem[3])
-//                .addDrawerItems(primaryDrawerItem[4])
-//                .addDrawerItems(primaryDrawerItem[5])
-//                .addDrawerItems(primaryDrawerItem[6])
-//                .addDrawerItems(primaryDrawerItem[7])
-//                .addDrawerItems(primaryDrawerItem[8])
-//                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
-//                    @RequiresApi(api = Build.VERSION_CODES.M)
-//                    @Override
-//                    public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-//                        boolean check=true;
-//                        switch (position)
-//                        {
-//                            case 0:
-//                            {
-//                                CheckForScreen(User.getUser());
-//                                ContextName.setText("Home");
-//                                check= false;
-//                                break;
-//                            }
-//                            case 1:
-//                            {
-//                                if(User.getUser()==null)
-//                                {
-//                                    NavigationHelper.LaunchSignInScreen(LoginScreen.this);
-//                                }
-//                                check=false;
-//                                break;
-//                            }
-//                            case 3:
-//                            {
-//                                HotelsScreen HS=new HotelsScreen();
-//                                LaunchFragment(HS);
-//                                ContextName.setText("Hotels");
-//                                check=false;
-//                                break;
-//                            }
-//                            case 4:
-//                            {
-//                                RoomsListView roomsListView=new RoomsListView();
-//                                LaunchFragment(roomsListView);
-//                                ContextName.setText("Rooms");
-//                                check=false;
-//                                break;
-//                            }
-//                            case 6:
-//                            {
-//                                BookingScreen BS=new BookingScreen();
-//                                LaunchFragment(BS);
-//                                ContextName.setText("Booking");
-//                                check=false;
-//                                break;
-//                            }
-//                            case 7:
-//                            {
-//                                ContactUsFragment CUF=new ContactUsFragment();
-//                                LaunchFragment(CUF);
-//                                ContextName.setText("Contact Us");
-//                                check=false;
-//                                break;
-//                            }
-//                            case 8:
-//                            {
-//                                AboutUsFragment AUF=new AboutUsFragment();
-//                                LaunchFragment(AUF);
-//                                ContextName.setText("About Us");
-//                                check=false;
-//                                break;
-//                            }
-//                        }
-//
-//                        view.setBackgroundColor(ColorUtil.getColor(R.color.MyColor));
-//                        return check;
-//                    }
-//                })
-//                .build();
-//
-//    }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     private void DrawerCreateWithAccount()
@@ -221,22 +113,24 @@ public class LoginScreen extends BaseActivity {
                 .addDrawerItems(primaryDrawerItem[1])
                 .addDrawerItems(primaryDrawerItem[2])
                 .addDrawerItems(primaryDrawerItem[3])
-                .addDrawerItems(primaryDrawerItem[4])
                 .addDrawerItems(primaryDrawerItem[5])
                 .addDrawerItems(primaryDrawerItem[6])
                 .addDrawerItems(primaryDrawerItem[7])
                 .addDrawerItems(primaryDrawerItem[8])
+
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @RequiresApi(api = Build.VERSION_CODES.M)
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         boolean check=true;
+
                         switch (position)
                         {
                             case 1:
                             {
-                                CheckForScreen(User.getUser());
-                                ContextName.setText("Home");
+                                RoomsListView RLS=new RoomsListView();
+                                NavigationHelper.LaunchFragment(RLS,getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
+                                getSupportActionBar().setTitle("Home");
                                 check= false;
                                 break;
                             }
@@ -274,40 +168,39 @@ public class LoginScreen extends BaseActivity {
                             {
                                 HotelsScreen HS=new HotelsScreen();
                                 NavigationHelper.LaunchFragment(HS,getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
-                                ContextName.setText("Hotels");
+                                getSupportActionBar().setTitle("Hotels");
                                 check=false;
-                                //setupWindowAnimations();
                                 break;
                             }
-                            case 5:
+//                            case 5:
+//                            {
+//                                RoomsListView roomsListView=new RoomsListView();
+//                                NavigationHelper.LaunchFragment(roomsListView,getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
+////                                ContextName.setText("Rooms");
+//                                check=false;
+//                                break;
+//                            }
+                            case 6:
                             {
-                                RoomsListView roomsListView=new RoomsListView();
-                                NavigationHelper.LaunchFragment(roomsListView,getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
-                                ContextName.setText("Rooms");
+                                BookingScreen BS=new BookingScreen();
+                                NavigationHelper.LaunchFragment(BS,getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
+                                getSupportActionBar().setTitle("Booking");
                                 check=false;
                                 break;
                             }
                             case 7:
                             {
-                                BookingScreen BS=new BookingScreen();
-                                NavigationHelper.LaunchFragment(BS,getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
-                                ContextName.setText("Booking");
+                                ContactUsFragment CUF=new ContactUsFragment();
+                                NavigationHelper.LaunchFragment(CUF,getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
                                 check=false;
+                                getSupportActionBar().setTitle("Contact Us");
                                 break;
                             }
                             case 8:
                             {
-                                ContactUsFragment CUF=new ContactUsFragment();
-                                NavigationHelper.LaunchFragment(CUF,getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
-                                check=false;
-                                ContextName.setText("Contact Us");
-                                break;
-                            }
-                            case 9:
-                            {
                                 AboutUsFragment AUF=new AboutUsFragment();
                                 NavigationHelper.LaunchFragment(AUF,getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
-                                ContextName.setText("About Us");
+                                getSupportActionBar().setTitle("About Us");
                                 check=false;
                                 break;
                             }

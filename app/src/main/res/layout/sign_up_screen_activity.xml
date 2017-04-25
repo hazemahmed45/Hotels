@@ -118,6 +118,7 @@
                 <com.hotels.base.customuicomponents.HotelEditText
                     android:id="@+id/user_signup_email_editext"
                     android:layout_width="300dp"
+                    style="@style/Fields"
                     android:layout_height="wrap_content"
                     android:hint="@string/email_hint" />
 
