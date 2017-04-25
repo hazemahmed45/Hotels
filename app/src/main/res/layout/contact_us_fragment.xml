@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hotels.features.main.activities.Fragments.ContactUsFragment">
+
+
+    <Button
+        android:id="@+id/contact_us_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="1"
+        android:text="Send" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/contact_us_email_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp">
+
+        <EditText
+            android:id="@+id/contact_us_email"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contact_us_email_layout"
+            android:layout_centerHorizontal="true"
+            android:hint="Email" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contact_us_email_layout"
+        android:layout_alignLeft="@+id/contact_us_email_layout"
+        android:layout_alignStart="@+id/contact_us_email_layout"
+        android:layout_marginTop="20dp"
+        android:id="@+id/contact_us_username_layout">
+
+        <EditText
+            android:id="@+id/contact_us_username"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Username" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contact_us_username_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="38dp"
+        android:id="@+id/contact_us_code_layout">
+
+        <EditText
+            android:id="@+id/contact_us_code"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Copy the code" />
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/contact_us_imagecode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/contact_us_code_layout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/contact_us_code_layout"
+        android:layout_toRightOf="@+id/contact_us_code_layout"
+        app:srcCompat="@mipmap/ic_launcher" />
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/contact_us_code_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/contact_us_subject_layout">
+
+        <EditText
+            android:id="@+id/contact_us_subject"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Subject" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/contact_us_comment_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/contact_us_subject_layout">
+
+        <EditText
+            android:id="@+id/contact_us_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Comment"
+            android:singleLine="false" />
+
+    </android.support.design.widget.TextInputLayout>
+
+</RelativeLayout>

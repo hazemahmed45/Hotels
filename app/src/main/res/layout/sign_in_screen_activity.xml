@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.main.activities.Activities.Login.SignInScreen">
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_signin_emaillayout_edittext"
+        android:layout_above="@+id/user_signin_passwordlayout_edittext"
+        android:layout_alignLeft="@+id/user_signin_passwordlayout_edittext"
+        android:layout_alignStart="@+id/user_signin_passwordlayout_edittext"
+        android:layout_marginBottom="28dp">
+
+        <EditText
+            android:id="@+id/user_signin_email_edittext"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Email" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/user_signin_passwordlayout_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <EditText
+            android:id="@+id/user_signin_password_edittext"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Password" />
+    </android.support.design.widget.TextInputLayout>
+
+    <com.hotels.base.customuicomponents.HotelBoldTextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your username and password."
+        android:layout_marginBottom="64dp"
+        android:layout_above="@+id/user_signin_emaillayout_edittext"
+        android:layout_alignLeft="@+id/user_signin_emaillayout_edittext"
+        android:layout_alignStart="@+id/user_signin_emaillayout_edittext" />
+
+    <com.hotels.base.customuicomponents.HotelsTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forget Password?"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/user_signin_passwordlayout_edittext"
+        android:layout_alignLeft="@+id/user_signin_passwordlayout_edittext"
+        android:layout_alignStart="@+id/user_signin_passwordlayout_edittext"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp" />
+    <com.hotels.base.customuicomponents.HotelBoldButton
+        android:id="@+id/user_signin_signin_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in"
+        android:background="@color/MyColor"
+        android:layout_above="@+id/user_signin_signup_button"
+        android:layout_centerHorizontal="true" />
+
+    <com.hotels.base.customuicomponents.HotelButton
+        android:id="@+id/user_signin_signup_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up"
+        android:background="@color/input_login_hint"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/user_signin_signin_button"
+        android:layout_alignStart="@+id/user_signin_signin_button"
+        android:layout_marginBottom="13dp" />
+
+
+
+</RelativeLayout>

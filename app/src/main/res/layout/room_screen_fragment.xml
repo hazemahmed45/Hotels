@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.main.activities.Activities.Login.LoginScreen">
+
+    <AdapterViewFlipper
+        android:id="@+id/room_image_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="66dp" />
+
+    <com.hotels.base.customuicomponents.HotelBoldTextView
+        android:id="@+id/room_name"
+        android:textColor="@color/MyColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="TextView" />
+
+    <com.hotels.base.customuicomponents.HotelBoldTextView
+        android:id="@+id/room_price"
+        android:textColor="@color/MyColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="TextView" />
+
+    <com.hotels.base.customuicomponents.HotelsTextView
+        android:id="@+id/room_luxory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/room_name"
+        android:layout_marginTop="17dp"
+        android:text="TextView" />
+
+    <com.hotels.base.customuicomponents.HotelsTextView
+        android:id="@+id/room_capacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/room_luxory"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="TextView" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TextScrollView"
+        android:layout_below="@+id/room_image_flipper"
+        android:layout_above="@+id/room_check_in">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.hotels.base.customuicomponents.HotelsTextView
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:id="@+id/room_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/paragraph"
+            android:textAlignment="center"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.hotels.base.customuicomponents.HotelButton
+        android:id="@+id/room_check_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextScrollView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/TextScrollView"
+        android:text="@string/check_in" />
+
+    <com.hotels.base.customuicomponents.HotelButton
+        android:id="@+id/room_vr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/TextScrollView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/TextScrollView"
+        android:text="@string/vr_view" />
+</RelativeLayout>

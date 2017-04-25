@@ -3,7 +3,9 @@ package com.hotels.base.customuicomponents;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
+import android.widget.TextView;
 
+import com.hotels.base.HotelsApplication;
 import com.hotels.utils.Fonts;
 
 
@@ -26,7 +28,7 @@ public class HotelsTextView extends android.support.v7.widget.AppCompatTextView 
         super(context, attrs, defStyle);
 
         if (mTypeface == null) {
-            mTypeface = Typeface.createFromAsset(context.getAssets(), Fonts.CAIRO);
+            mTypeface = Typeface.createFromAsset(context.getAssets(), Fonts.RegularGothic);
         }
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {

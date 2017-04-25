@@ -5,4 +5,6 @@ package com.hotels.base.constants;
  */
 /*For shared constants*/
 public class PrefConstants {
+    public static final String ViewPagerImageKey="VPImageKey";
+    public static final String ViewPagerStringKey="VPStringKey";
 }

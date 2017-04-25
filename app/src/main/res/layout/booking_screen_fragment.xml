@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hotels.features.main.activities.Fragments.BookingScreen">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <com.hotels.base.customuicomponents.HotelEditText
+        android:id="@+id/booking_checkin_edittext"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:layout_marginTop="75dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/booking_room_spinner" />
+
+    <com.hotels.base.customuicomponents.HotelsTextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="Check In:"
+        android:layout_above="@+id/booking_checkout_edittext"
+        android:layout_alignParentStart="true" />
+
+    <com.hotels.base.customuicomponents.HotelEditText
+        android:id="@+id/booking_checkout_edittext"
+        android:layout_width="100dp"
+        android:focusable="false"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/booking_checkin_edittext"
+        android:layout_alignStart="@+id/booking_checkin_edittext" />
+
+    <com.hotels.base.customuicomponents.HotelsTextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/booking_checkout_edittext"
+        android:layout_alignStart="@+id/textView4"
+        android:text="Check out:" />
+
+    <Spinner
+        android:id="@+id/booking_adult_spinner"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/booking_checkout_edittext"
+        android:layout_below="@+id/booking_checkout_edittext"
+        android:layout_marginTop="51dp" />
+
+    <Spinner
+        android:id="@+id/booking_room_spinner"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView4"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="51dp"
+        android:layout_marginEnd="41dp" />
+
+    <com.hotels.base.customuicomponents.HotelsTextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/booking_room_spinner"
+        android:layout_alignStart="@+id/textView4"
+        android:text="Room:" />
+
+    <com.hotels.base.customuicomponents.HotelsTextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adults:"
+        android:layout_alignBottom="@+id/booking_adult_spinner"
+        android:layout_alignStart="@+id/textView5" />
+
+    <Spinner
+        android:id="@+id/booking_child_spinner"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:layout_below="@+id/booking_adult_spinner"
+        android:layout_alignStart="@+id/booking_adult_spinner" />
+
+    <com.hotels.base.customuicomponents.HotelsTextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/booking_child_spinner"
+        android:layout_alignStart="@+id/textView7"
+        android:text="Child:" />
+
+    <com.hotels.base.customuicomponents.HotelCheckBox
+        android:id="@+id/booking_using_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:text="use your points"
+        android:layout_below="@+id/textView8"
+        android:layout_alignStart="@+id/textView8" />
+
+    <com.hotels.base.customuicomponents.HotelsTextView
+        android:id="@+id/booking_points_system"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You Have 0 points"
+        android:textAllCaps="false"
+        android:layout_below="@+id/booking_using_points"
+        android:layout_alignStart="@+id/booking_using_points"
+        android:layout_marginTop="18dp" />
+
+    <com.hotels.base.customuicomponents.HotelButton
+        android:id="@+id/booking_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Book" />
+
+</RelativeLayout>

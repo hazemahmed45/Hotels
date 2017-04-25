@@ -1,3 +1,65 @@
 <resources>
     <string name="app_name">Hotels</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+    <string name="home">Home</string>
+    <string name="my_points">My Points</string>
+    <string name="account">Account</string>
+    <string name="hotel">Hotel</string>
+    <string name="rooms">Rooms</string>
+    <string name="gallery">Gallery</string>
+    <string name="booking">Booking</string>
+    <string name="about_us">About us</string>
+    <string name="contact_us">Contact us</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="phone_hint">Phone Number</string>
+    <string name="first_name_hint">First Name</string>
+    <string name="last_name_hint">Last Name</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="error_msgs">Rejected</string>
+    <string name="error_wrongpass">Wrong Password</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_text">Welcome </string>
+    <string name="your_points">Your Points: </string>
+    <string name="search_your_rooms">Search your rooms</string>
+    <string name="check_in">Check In</string>
+    <string name="vr_view">View In VR</string>
+    <string name="paragraph">Sino-Roman relations comprised the mostly indirect contact, flow of trade goods, information, and occasional travelers between the Roman Empire and Han Empire of China, as well as between the later Eastern Roman Empire and various Chinese dynasties. These empires inched progressively closer in the course of the Roman expansion into the ancient Near East and simultaneous Han Chinese military incursions into Central Asia. Mutual awareness remained low and firm knowledge about each other was limited. Only a few attempts at direct contact are known from records. Intermediate empires such as the Parthians and Kushans, seeking to maintain lucrative control over the silk trade, inhibited direct contact between these two Eurasian powers. In 97 AD, the Chinese general Ban Chao tried to send his envoy Gan Ying to Rome, but Gan was dissuaded by Parthians from venturing beyond the Persian Gulf. Several alleged Roman emissaries to China were recorded by ancient Chinese historians. The first one on record, supposedly from either the Roman emperor Antoninus Pius or his adopted son Marcus Aurelius, arrived in 166 AD. Others are recorded as arriving in 226 and 284 AD, with a long absence until the first recorded Byzantine embassy in 643 AD.
+
+The indirect exchange of goods on land along the Silk Road and sea routes included Chinese silk, Roman glassware and high-quality cloth. Roman coins minted from the 1st century AD onwards have been found in China, as well as a coin of Maximian and medallions from the reigns of Antoninus Pius and Marcus Aurelius in Jiaozhi in modern Vietnam, the same region Chinese sources claim the Romans first landed. Roman glassware and silverware have been discovered at Chinese archaeological sites dated to the Han period. Roman coins and glass beads have also been found in Japan.
+
+In classical sources, the problem of identifying references to ancient China is exacerbated by the interpretation of the Latin term "Seres", whose meaning fluctuated and could refer to several Asian people in a wide arc from India over Central Asia to China. In Chinese records, the Roman Empire came to be known as "Daqin" or Great Qin. Daqin was directly associated with the later "Fulin" (拂菻) in Chinese sources, which has been identified by scholars such as Friedrich Hirth as the Byzantine Empire. Chinese sources describe several embassies of Fulin arriving in China during the Tang dynasty and also mention the siege of Constantinople by the forces of Muawiyah I in 674–678 AD.</string>
+    <string name="about_us_paragraph">    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="save">Save</string>
+    <string name="nights">Nights</string>
+    <string name="stays">Stays</string>
+    <string name="points">Points</string>
+    <string-array name="adult_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="child_array">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="rooms_array">
+        <item>Deluxe Double Bedroom</item>
+        <item>Luxury suite</item>
+        <item>Royal suite</item>
+        <item>One-Bedroom Apartment</item>
+        <item>Deluxe Double Room</item>
+        <item>Family Suite</item>
+        <item>Double Room</item>
+        <item>Deluxe Double Room</item>
+        <item>Twin Room - Non-Smoking</item>
+    </string-array>
 </resources>

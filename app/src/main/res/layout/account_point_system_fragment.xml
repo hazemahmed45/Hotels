@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hotels.features.main.activities.Fragments.ViewPager.Account.AccountPointSystemFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <com.triggertrap.seekarc.SeekArc
+        android:id="@+id/points_seekbar"
+        android:layout_width="250dp"
+        android:layout_height="240dp"
+        android:padding="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:touchInside="false"
+        app:roundEdges="true"
+        app:arcWidth="30dp"
+        app:progressWidth="30dp"
+         />
+
+    <com.hotels.base.customuicomponents.HotelBoldTextView
+        android:id="@+id/user_points"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:layout_toStartOf="@+id/points_seekbar"
+        android:text="TextView"
+        android:textAlignment="center" />
+
+    <com.hotels.base.customuicomponents.HotelsTextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stays"
+        android:layout_marginBottom="26dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/points_seekbar" />
+
+    <com.hotels.base.customuicomponents.HotelsTextView
+        android:id="@+id/number_stays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView11"
+        android:text="10" />
+
+    <com.hotels.base.customuicomponents.HotelsTextView
+        android:id="@+id/number_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/textView16" />
+
+    <com.hotels.base.customuicomponents.HotelsTextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView12"
+        android:layout_alignBottom="@+id/textView12"
+        android:layout_toEndOf="@+id/points_seekbar"
+        android:text="@string/points" />
+
+    <com.hotels.base.customuicomponents.HotelsTextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nights"
+        android:layout_alignBaseline="@+id/textView11"
+        android:layout_alignBottom="@+id/textView11"
+        android:layout_centerHorizontal="true" />
+
+    <com.hotels.base.customuicomponents.HotelsTextView
+        android:id="@+id/number_nights"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="10"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <com.hotels.base.customuicomponents.HotelBoldTextView
+        android:id="@+id/seekbar_perc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="TextView"
+        android:textSize="30sp" />
+
+</RelativeLayout>
