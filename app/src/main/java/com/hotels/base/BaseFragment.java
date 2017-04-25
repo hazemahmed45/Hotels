@@ -20,7 +20,7 @@ public class BaseFragment extends Fragment {
     }
 
     protected void showLoading(){
-        // TODO: 13/04/17 implement Progresss bar  stuff
+        // TODO: 13/04/17 implement Progress bar  stuff
     }
 
     protected void hideLoading(){
