@@ -11,15 +11,10 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/login_toolbar"
         android:layout_width="match_parent"
-
+        android:background="@color/colorPrimary"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
 
-            android:layout_marginLeft="170dp"
             app:srcCompat="@android:drawable/ic_menu_call" />
     </android.support.v7.widget.Toolbar>
 
