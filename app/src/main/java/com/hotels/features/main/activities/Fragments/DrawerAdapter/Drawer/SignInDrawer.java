@@ -1,4 +1,4 @@
-package com.hotels.features.main.activities.Fragments.ViewPager.Drawer;
+package com.hotels.features.main.activities.Fragments.DrawerAdapter.Drawer;
 
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -25,4 +25,5 @@ public class SignInDrawer extends BaseDrawer {
         Viewholder viewholder=new Viewholder(view);
         return viewholder;
     }
+
 }

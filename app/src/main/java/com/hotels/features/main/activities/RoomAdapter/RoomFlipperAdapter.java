@@ -12,10 +12,12 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.hotels.R;
 import com.hotels.base.HotelsApplication;
 import com.hotels.model.Rooms;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.zip.Inflater;
@@ -25,11 +27,12 @@ import java.util.zip.Inflater;
  */
 
 public class RoomFlipperAdapter extends BaseAdapter {
-    ArrayList<Bitmap> RoomImages;
+    ArrayList<String> RoomImages;
     Context context;
     LayoutInflater inflater;
     Activity activity;
-    public RoomFlipperAdapter(ArrayList<Bitmap> rooms, Context c, Activity a) {
+    public RoomFlipperAdapter(ArrayList<String> rooms, Context c, Activity a) {
+
         this.RoomImages = rooms;
         context=c;
         activity=a;
@@ -55,9 +58,8 @@ public class RoomFlipperAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         ImageView RoomView=new ImageView(context);
         RoomView.setScaleType(ImageView.ScaleType.FIT_XY);
-        RoomView.setLayoutParams(new ImageSwitcher.LayoutParams(activity.getWindowManager().getDefaultDisplay().getWidth(), ViewGroup.LayoutParams.MATCH_PARENT));
-        RoomView.setImageBitmap(RoomImages.get(i));
 
+        Picasso.with(context).load(RoomImages.get(i)).placeholder(R.drawable.ic_launcher).into(RoomView);
         return RoomView;
 
     }

@@ -15,6 +15,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.hotels.R;
 import com.hotels.base.constants.NavConstants;
 import com.hotels.model.Rooms;
@@ -121,5 +123,10 @@ public class BookingScreen extends Fragment {
 
         };
         return Data;
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        YoYo.with(Techniques.SlideInLeft).duration(500).playOn(this.getView());
     }
 }

@@ -7,23 +7,25 @@
     tools:context=".features.main.activities.Activities.Splash.SplashScreen">
 
     <com.hotels.base.customuicomponents.HotelBoldTextView
-        android:layout_width="wrap_content"
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text=" Book your holydays with Resort"
-
-        android:textSize="20sp"
-        android:id="@+id/textView9" />
+        android:textAlignment="center"
+        android:textSize="20sp" />
 
     <com.hotels.base.customuicomponents.HotelsTextView
-        android:layout_width="wrap_content"
+        android:id="@+id/hotelsTextView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Fast, Easy and Powerfull"
-        android:layout_marginBottom="67dp"
         android:layout_above="@+id/loading_view"
         android:layout_centerHorizontal="true"
-        android:id="@+id/hotelsTextView" />
+        android:layout_marginBottom="67dp"
+        android:text="Fast, Easy and Powerfull"
+        android:textAlignment="center" />
 
     <io.saeid.fabloading.LoadingView
         android:id="@+id/loading_view"
@@ -46,7 +48,7 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="99dp"
+        android:layout_marginTop="96dp"
         app:srcCompat="@mipmap/ic_launcher"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />

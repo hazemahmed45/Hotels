@@ -8,9 +8,16 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.widget.Toast;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+import com.hotels.base.HotelsApplication;
 import com.hotels.features.main.activities.Activities.Login.LoginScreen;
 import com.hotels.features.main.activities.Activities.Login.SignInScreen;
 import com.hotels.features.main.activities.Activities.Login.SignUpScreen;
+import com.hotels.features.main.activities.Fragments.RoomScreenFragment;
+import com.hotels.features.main.activities.Fragments.VrRoom;
+
+import java.lang.reflect.Type;
 
 /**
  * Created by ahmed on 13/04/17.
@@ -35,12 +42,15 @@ public class NavigationHelper {
         //FT.addToBackStack(null);
         FT.commit();
     }
-    public static void LaunchFragment(Fragment fragment, FragmentManager fragmentManager, int ResLayout, Bundle bundle)
+    public static void LaunchFragment(final Fragment fragment, FragmentManager fragmentManager, int ResLayout, Bundle bundle)
     {
         FragmentTransaction FT=fragmentManager.beginTransaction();
         FT.replace(ResLayout,fragment);
         fragment.setArguments(bundle);
-        //FT.addToBackStack(null);
+//        if(fragment.getClass()== RoomScreenFragment.class)
+//        {
+//            FT.addToBackStack(null);
+//        }
         FT.commit();
     }
 }

@@ -1,10 +1,12 @@
 package com.hotels.model;
 
+import java.io.Serializable;
+
 /**
  * Created by ahmed on 12/04/17.
  */
 
-public class User {
+public class User  {
     private String FirstName;
     private String LastName;
     private String Email;
@@ -13,7 +15,7 @@ public class User {
     private long Points;
     private int Stays;
     private int Nights;
-    private static User user;
+    private static User user=null;
 
     public User()
     {

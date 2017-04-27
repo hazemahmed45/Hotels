@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.hotels.R;
 import com.hotels.utils.StringUtil;
 
@@ -116,5 +118,10 @@ public class ContactUsFragment extends Fragment {
             commentLayout.setErrorEnabled(false);
         }
         return true;
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        YoYo.with(Techniques.SlideInLeft).duration(500).playOn(this.getView());
     }
 }

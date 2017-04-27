@@ -9,10 +9,10 @@ import java.util.ArrayList;
  * Created by Hazem on 4/17/2017.
  */
 
-public class Rooms implements Serializable {
+public class Rooms implements Serializable  {
     private String name;
     private String price;
-    private ArrayList<Bitmap> roomImage;
+    private ArrayList<String> roomImage;
     private int capacity;
     private String desc;
     private String luxory;
@@ -44,11 +44,11 @@ public class Rooms implements Serializable {
         this.price = price;
     }
 
-    public ArrayList<Bitmap> getRoomImage() {
+    public ArrayList<String> getRoomImage() {
         return roomImage;
     }
 
-    public void setRoomImage(ArrayList<Bitmap> roomImage) {
+    public void setRoomImage(ArrayList<String> roomImage) {
         this.roomImage = roomImage;
     }
 

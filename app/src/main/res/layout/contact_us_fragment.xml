@@ -6,7 +6,7 @@
     tools:context="com.hotels.features.main.activities.Fragments.ContactUsFragment">
 
 
-    <Button
+    <com.hotels.base.customuicomponents.HotelButton
         android:id="@+id/contact_us_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp">
 
-        <EditText
+        <com.hotels.base.customuicomponents.HotelEditText
             android:id="@+id/contact_us_email"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
         android:layout_marginTop="20dp"
         android:id="@+id/contact_us_username_layout">
 
-        <EditText
+        <com.hotels.base.customuicomponents.HotelEditText
             android:id="@+id/contact_us_username"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
         android:layout_marginTop="38dp"
         android:id="@+id/contact_us_code_layout">
 
-        <EditText
+        <com.hotels.base.customuicomponents.HotelEditText
             android:id="@+id/contact_us_code"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
         android:layout_alignParentEnd="true"
         android:id="@+id/contact_us_subject_layout">
 
-        <EditText
+        <com.hotels.base.customuicomponents.HotelEditText
             android:id="@+id/contact_us_subject"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -100,7 +100,7 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/contact_us_subject_layout">
 
-        <EditText
+        <com.hotels.base.customuicomponents.HotelEditText
             android:id="@+id/contact_us_comment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

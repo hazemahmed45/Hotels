@@ -12,6 +12,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+import com.daimajia.slider.library.SliderLayout;
+import com.daimajia.slider.library.SliderTypes.BaseSliderView;
+import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.hotels.R;
 import com.hotels.base.HotelsApplication;
 import com.hotels.features.main.activities.Fragments.ViewPager.Hotel.HotelViewPagerAdapter;
@@ -33,7 +38,7 @@ public class HotelsScreen extends Fragment {
         // Required empty public constructor
     }
 
-    @BindView(R.id.hotels_slider)ViewPager viewPager;
+    @BindView(R.id.hotels_slider)SliderLayout viewPager;
     @BindView(R.id.hotels_text)TextView hotelDesc;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,19 +47,37 @@ public class HotelsScreen extends Fragment {
         View view=inflater.inflate(R.layout.hotels_screen_fragment, container, false);
         ButterKnife.bind(this,view);
         hotelDesc.setText(StringUtil.getStringRes(R.string.paragraph));
-        ArrayList<Bitmap> bitmaps=new ArrayList<>();
-        bitmaps.add(BitmapFactory.decodeResource(HotelsApplication.get().getResources(),R.drawable.progressbar));
-        bitmaps.add(BitmapFactory.decodeResource(HotelsApplication.get().getResources(),R.drawable.listviewwithimage));
-        bitmaps.add(BitmapFactory.decodeResource(HotelsApplication.get().getResources(),R.mipmap.ic_launcher));
+        ArrayList<Integer> bitmaps=new ArrayList<>();
+        bitmaps.add(R.drawable.progressbar);
+        bitmaps.add(R.drawable.listviewwithimage);
+        bitmaps.add(R.mipmap.ic_launcher);
         ArrayList<String> Names=new ArrayList<>();
         Names.add("Hotel 1");
         Names.add("Hotel 2");
         Names.add("Hotel 3");
+        for (int i=0;i<bitmaps.size();i++)
+        {
+            TextSliderView textSliderView = new TextSliderView(this.getContext());
+            // initialize a SliderLayout
+            textSliderView
+                    .description(Names.get(i))
+                    .image(bitmaps.get(i))
+                    .setScaleType(BaseSliderView.ScaleType.Fit);
 
-        final HotelViewPagerAdapter adapter=new HotelViewPagerAdapter(this.getChildFragmentManager(), bitmaps , Names );
-        viewPager.setAdapter(adapter);
+
+            //add your extra information
+            textSliderView.bundle(new Bundle());
+            textSliderView.getBundle()
+                    .putString("extra",Names.get(i));
+
+            viewPager.addSlider(textSliderView);
+        }
 
         return view;
     }
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        YoYo.with(Techniques.SlideInLeft).duration(500).playOn(this.getView());
+    }
 }

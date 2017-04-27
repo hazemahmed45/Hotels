@@ -25,11 +25,11 @@
         </RelativeLayout>
     </ScrollView>
 
-    <android.support.v4.view.ViewPager
+    <com.daimajia.slider.library.SliderLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_weight="4"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/hotels_slider"></android.support.v4.view.ViewPager>
+        android:id="@+id/hotels_slider"></com.daimajia.slider.library.SliderLayout>
 </RelativeLayout>

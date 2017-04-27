@@ -2,7 +2,10 @@ package com.hotels.features.main.activities.Fragments;
 
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -15,6 +18,11 @@ import android.widget.Toast;
 import com.google.vr.sdk.widgets.pano.VrPanoramaEventListener;
 import com.google.vr.sdk.widgets.pano.VrPanoramaView;
 import com.hotels.R;
+import com.hotels.base.HotelsApplication;
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Target;
+
+import java.io.IOException;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,6 +33,7 @@ import butterknife.ButterKnife;
 public class VrRoom extends Fragment {
 
     boolean loadImageSuccessful;
+    public Bitmap VrRoomImage;
     public VrRoom() {
         // Required empty public constructor
     }
@@ -47,8 +56,28 @@ public class VrRoom extends Fragment {
             panoOptions=new VrPanoramaView.Options();
         }
         panoOptions.inputType = VrPanoramaView.Options.TYPE_MONO;
+        Picasso.with(VrRoom.this.getContext())
+                .load("http://static1.360vrs.com/pano-content/hotel-room-at-the-hotel-biz-myeong-dong/640px-360-panorama.jpg")
+                .into(new Target() {
+                    @Override
+                    public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
+                        VrRoomImage=bitmap;
+                        panoWidgetView.loadImageFromBitmap(VrRoomImage,null);
+                        Toast.makeText(VrRoom.this.getContext(), "Successful", Toast.LENGTH_SHORT).show();
+                    }
 
-        panoWidgetView.loadImageFromBitmap(null,panoOptions);
+                    @Override
+                    public void onBitmapFailed(Drawable errorDrawable) {
+                        Toast.makeText(VrRoom.this.getContext(), "Failed", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onPrepareLoad(Drawable placeHolderDrawable) {
+                        VrRoomImage=BitmapFactory.decodeResource(HotelsApplication.get().getResources(),R.mipmap.ic_launcher);
+                    }
+                });
+
+        panoWidgetView.loadImageFromBitmap(VrRoomImage,null);
     }
     @Override
     public void onPause() {

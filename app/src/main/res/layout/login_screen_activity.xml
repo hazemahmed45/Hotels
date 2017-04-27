@@ -7,7 +7,6 @@
     tools:context=".features.main.activities.Activities.Login.LoginScreen">
 
 
-
     <android.support.v7.widget.Toolbar
         android:id="@+id/login_toolbar"
         android:layout_width="match_parent"

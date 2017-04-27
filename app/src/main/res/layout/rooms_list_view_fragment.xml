@@ -5,8 +5,9 @@
     tools:context="com.hotels.features.main.activities.Fragments.RoomsListView">
 
     <!-- TODO: Update blank fragment layout -->
-    <com.github.ksoichiro.android.observablescrollview.ObservableListView
+    <GridView
         android:id="@+id/rooms_listview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></com.github.ksoichiro.android.observablescrollview.ObservableListView>
+        android:numColumns="2"
+        android:layout_height="match_parent"></GridView>
 </RelativeLayout>

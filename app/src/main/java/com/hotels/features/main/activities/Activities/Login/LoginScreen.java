@@ -2,31 +2,24 @@ package com.hotels.features.main.activities.Activities.Login;
 
 import android.os.Build;
 import android.support.annotation.RequiresApi;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
-import android.transition.Slide;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.animation.AccelerateInterpolator;
-import android.view.animation.DecelerateInterpolator;
 import android.widget.FrameLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.hotels.R;
 import com.hotels.base.BaseActivity;
+import com.hotels.base.BaseDrawer;
 import com.hotels.features.main.activities.Fragments.AboutUsFragment;
 import com.hotels.features.main.activities.Fragments.BookingScreen;
 import com.hotels.features.main.activities.Fragments.ContactUsFragment;
 import com.hotels.features.main.activities.Fragments.HotelsScreen;
 import com.hotels.features.main.activities.Fragments.ViewPager.Account.AccountViewPagerFragment;
+import com.hotels.features.main.activities.Fragments.DrawerAdapter.Drawer.LoginDrawer;
+import com.hotels.features.main.activities.Fragments.DrawerAdapter.Drawer.SignInDrawer;
 import com.hotels.utils.NavigationHelper;
-import com.hotels.features.main.activities.Fragments.HomeScreen;
-import com.hotels.features.main.activities.Fragments.LoginScreenFragment;
 import com.hotels.features.main.activities.Fragments.RoomsListView;
 import com.hotels.model.User;
 import com.hotels.utils.ColorUtil;
@@ -34,6 +27,7 @@ import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
+import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
@@ -43,37 +37,50 @@ import butterknife.ButterKnife;
 public class LoginScreen extends BaseActivity {
 
     Drawer drawer;
-    @BindView(R.id.login_toolbar) public Toolbar toolbar;
 
-    //@BindView(R.id.toolbar_context_name)TextView ContextName;
+    @BindView(R.id.login_toolbar) public Toolbar toolbar;
     @BindView(R.id.FrameLayoutLoginScreen)FrameLayout frameLayout;
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_screen_activity);
         ButterKnife.bind(LoginScreen.this);
+
+
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Home");
-        //setupWindowAnimations();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        drawer.closeDrawer();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onResume() {
         super.onResume();
-
+        //YoYo.with(Techniques.BounceIn).delay(0).duration(1000).playOn(findViewById(R.id.FrameLayoutLoginScreen));
         DrawerCreateWithAccount();
-
-        LaunchFragment(new RoomsListView());
-
+        NavigationHelper.LaunchFragment(new RoomsListView(),getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
     }
-
-
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     private void DrawerCreateWithAccount()
     {
+        BaseDrawer Base;
+        if(User.getUser().getEmail()==null)
+        {
+            Base=new SignInDrawer(LoginScreen.this);
+        }
+        else
+        {
+            Base=new LoginDrawer(LoginScreen.this);
+        }
+
         AccountHeader headerResult;
         if(User.getUser().getEmail()!=null)
         {
@@ -105,6 +112,7 @@ public class LoginScreen extends BaseActivity {
 //                })
                     .build();
         }
+
         drawer=new DrawerBuilder()
                 .withActivity(LoginScreen.this)
                 .withToolbar(toolbar)
@@ -117,19 +125,21 @@ public class LoginScreen extends BaseActivity {
                 .addDrawerItems(primaryDrawerItem[6])
                 .addDrawerItems(primaryDrawerItem[7])
                 .addDrawerItems(primaryDrawerItem[8])
+                .addDrawerItems(new DividerDrawerItem())
+                .addDrawerItems(Base)
+
 
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @RequiresApi(api = Build.VERSION_CODES.M)
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         boolean check=true;
-
+                        drawer.closeDrawer();
                         switch (position)
                         {
                             case 1:
                             {
-                                RoomsListView RLS=new RoomsListView();
-                                NavigationHelper.LaunchFragment(RLS,getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
+                                NavigationHelper.LaunchFragment(RoomsListView.getInsatance(),getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
                                 getSupportActionBar().setTitle("Home");
                                 check= false;
                                 break;
@@ -139,12 +149,10 @@ public class LoginScreen extends BaseActivity {
                                 if(User.getUser().getEmail()==null)
                                 {
                                     NavigationHelper.LaunchSignInScreen(LoginScreen.this);
-
                                 }
                                 else
                                 {
-                                    AccountViewPagerFragment AVPF=AccountViewPagerFragment.getInstance();
-                                    NavigationHelper.LaunchFragment(AVPF,getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
+                                    NavigationHelper.LaunchFragment(AccountViewPagerFragment.getInstance(),getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
                                 }
                                 check=false;
                                 break;
@@ -172,14 +180,6 @@ public class LoginScreen extends BaseActivity {
                                 check=false;
                                 break;
                             }
-//                            case 5:
-//                            {
-//                                RoomsListView roomsListView=new RoomsListView();
-//                                NavigationHelper.LaunchFragment(roomsListView,getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
-////                                ContextName.setText("Rooms");
-//                                check=false;
-//                                break;
-//                            }
                             case 6:
                             {
                                 BookingScreen BS=new BookingScreen();
@@ -204,6 +204,10 @@ public class LoginScreen extends BaseActivity {
                                 check=false;
                                 break;
                             }
+                            case 10:
+                            {
+                                NavigationHelper.LaunchSignInScreen(LoginScreen.this);
+                            }
                         }
 
                         view.setBackgroundColor(ColorUtil.getColor(R.color.MyColor));
@@ -212,19 +216,6 @@ public class LoginScreen extends BaseActivity {
                 })
                 .build();
 
-    }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
-
-    private void LaunchFragment(Fragment fragment)
-    {
-        FragmentTransaction FT=getSupportFragmentManager().beginTransaction();
-        FT.replace(R.id.FrameLayoutLoginScreen,fragment);
-        FT.addToBackStack(null);
-        FT.commit();
     }
 
 }

@@ -42,32 +42,33 @@
         </RelativeLayout>
     </ScrollView>
 
-    <com.hotels.base.customuicomponents.HotelBoldButton
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/about_us_facebook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:src="@drawable/facebook"
+        android:text="Facebook"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:text="Facebook" />
+        android:layout_marginBottom="16dp" />
 
-    <com.hotels.base.customuicomponents.HotelBoldButton
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/about_us_twitter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:src="@drawable/twitter"
+        android:text="Twitter"
         android:layout_alignTop="@+id/about_us_facebook"
-        android:layout_centerHorizontal="true"
-        android:text="Twitter" />
+        android:layout_centerHorizontal="true" />
 
-    <com.hotels.base.customuicomponents.HotelBoldButton
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/about_us_instgram"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/about_us_twitter"
         android:layout_marginLeft="29dp"
-        android:layout_marginStart="29dp"
-        android:layout_toEndOf="@+id/textView2"
-        android:layout_toRightOf="@+id/textView2"
-        android:text="Instgram" />
+        android:src="@drawable/instagram"
+        android:text="Instgram"
+        android:layout_alignTop="@+id/about_us_twitter"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
