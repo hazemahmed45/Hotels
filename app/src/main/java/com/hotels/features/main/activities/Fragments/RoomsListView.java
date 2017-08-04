@@ -84,6 +84,106 @@ public class RoomsListView extends Fragment {
                 "\n" +
                 "Free WiFi is available in all rooms.\n","Pool & Jacuzzi Suite"));
         rooms.get(rooms.size()-1).getRoomImage().add("http://hotelzzz.oneclick-sa.com/medias/room/big/39/royal-sonesta-new-orleans-bourbon-balcony-hospitality-suite.jpg");
+        rooms.add(new Rooms("Royal suite","1,500",5,"Private bathroom\n" +
+                "\n" +
+                "Room Size: 60 m²\n" +
+                "\n" +
+                "Featuring a modern design and free Wi-Fi, this spacious, air-conditioned suite has a bedroom and 2 flat-screen satellite TVs. It offers a kitchenette, dining area and living room. A bath and shower are fitted in the private bathroom.\n" +
+                "\n" +
+                "Room Facilities: Safe, Air conditioning, Iron, Ironing facilities, Sitting area, Walk-in closet, Carpeted, Sofa, Hardwood/Parquet floors, Wardrobe/Closet, Shower, Bathtub, Hairdryer, Bathrobe, Free toiletries, Toilet, Bathroom, Slippers, TV, Telephone, Satellite channels, Cable channels, Minibar, Refrigerator, Microwave, Kitchen, Dining area, Electric kettle, Kitchenware, Oven, Stovetop, Wake-up service, Alarm clock\n" +
+                "\n" +
+                "Free WiFi is available in all rooms.\n","Pool & Jacuzzi Suite"));
+        rooms.get(rooms.size()-1).getRoomImage().add("http://hotelzzz.oneclick-sa.com/medias/room/big/39/royal-sonesta-new-orleans-bourbon-balcony-hospitality-suite.jpg");
+        rooms.add(new Rooms("Royal suite","1,500",5,"Private bathroom\n" +
+                "\n" +
+                "Room Size: 60 m²\n" +
+                "\n" +
+                "Featuring a modern design and free Wi-Fi, this spacious, air-conditioned suite has a bedroom and 2 flat-screen satellite TVs. It offers a kitchenette, dining area and living room. A bath and shower are fitted in the private bathroom.\n" +
+                "\n" +
+                "Room Facilities: Safe, Air conditioning, Iron, Ironing facilities, Sitting area, Walk-in closet, Carpeted, Sofa, Hardwood/Parquet floors, Wardrobe/Closet, Shower, Bathtub, Hairdryer, Bathrobe, Free toiletries, Toilet, Bathroom, Slippers, TV, Telephone, Satellite channels, Cable channels, Minibar, Refrigerator, Microwave, Kitchen, Dining area, Electric kettle, Kitchenware, Oven, Stovetop, Wake-up service, Alarm clock\n" +
+                "\n" +
+                "Free WiFi is available in all rooms.\n","Pool & Jacuzzi Suite"));
+        rooms.get(rooms.size()-1).getRoomImage().add("http://hotelzzz.oneclick-sa.com/medias/room/big/39/royal-sonesta-new-orleans-bourbon-balcony-hospitality-suite.jpg");
+        rooms.add(new Rooms("Royal suite","1,500",5,"Private bathroom\n" +
+                "\n" +
+                "Room Size: 60 m²\n" +
+                "\n" +
+                "Featuring a modern design and free Wi-Fi, this spacious, air-conditioned suite has a bedroom and 2 flat-screen satellite TVs. It offers a kitchenette, dining area and living room. A bath and shower are fitted in the private bathroom.\n" +
+                "\n" +
+                "Room Facilities: Safe, Air conditioning, Iron, Ironing facilities, Sitting area, Walk-in closet, Carpeted, Sofa, Hardwood/Parquet floors, Wardrobe/Closet, Shower, Bathtub, Hairdryer, Bathrobe, Free toiletries, Toilet, Bathroom, Slippers, TV, Telephone, Satellite channels, Cable channels, Minibar, Refrigerator, Microwave, Kitchen, Dining area, Electric kettle, Kitchenware, Oven, Stovetop, Wake-up service, Alarm clock\n" +
+                "\n" +
+                "Free WiFi is available in all rooms.\n","Pool & Jacuzzi Suite"));
+        rooms.get(rooms.size()-1).getRoomImage().add("http://hotelzzz.oneclick-sa.com/medias/room/big/39/royal-sonesta-new-orleans-bourbon-balcony-hospitality-suite.jpg");
+        rooms.add(new Rooms("Royal suite","1,500",5,"Private bathroom\n" +
+                "\n" +
+                "Room Size: 60 m²\n" +
+                "\n" +
+                "Featuring a modern design and free Wi-Fi, this spacious, air-conditioned suite has a bedroom and 2 flat-screen satellite TVs. It offers a kitchenette, dining area and living room. A bath and shower are fitted in the private bathroom.\n" +
+                "\n" +
+                "Room Facilities: Safe, Air conditioning, Iron, Ironing facilities, Sitting area, Walk-in closet, Carpeted, Sofa, Hardwood/Parquet floors, Wardrobe/Closet, Shower, Bathtub, Hairdryer, Bathrobe, Free toiletries, Toilet, Bathroom, Slippers, TV, Telephone, Satellite channels, Cable channels, Minibar, Refrigerator, Microwave, Kitchen, Dining area, Electric kettle, Kitchenware, Oven, Stovetop, Wake-up service, Alarm clock\n" +
+                "\n" +
+                "Free WiFi is available in all rooms.\n","Pool & Jacuzzi Suite"));
+        rooms.get(rooms.size()-1).getRoomImage().add("http://hotelzzz.oneclick-sa.com/medias/room/big/39/royal-sonesta-new-orleans-bourbon-balcony-hospitality-suite.jpg");
+        rooms.add(new Rooms("Royal suite","1,500",5,"Private bathroom\n" +
+                "\n" +
+                "Room Size: 60 m²\n" +
+                "\n" +
+                "Featuring a modern design and free Wi-Fi, this spacious, air-conditioned suite has a bedroom and 2 flat-screen satellite TVs. It offers a kitchenette, dining area and living room. A bath and shower are fitted in the private bathroom.\n" +
+                "\n" +
+                "Room Facilities: Safe, Air conditioning, Iron, Ironing facilities, Sitting area, Walk-in closet, Carpeted, Sofa, Hardwood/Parquet floors, Wardrobe/Closet, Shower, Bathtub, Hairdryer, Bathrobe, Free toiletries, Toilet, Bathroom, Slippers, TV, Telephone, Satellite channels, Cable channels, Minibar, Refrigerator, Microwave, Kitchen, Dining area, Electric kettle, Kitchenware, Oven, Stovetop, Wake-up service, Alarm clock\n" +
+                "\n" +
+                "Free WiFi is available in all rooms.\n","Pool & Jacuzzi Suite"));
+        rooms.get(rooms.size()-1).getRoomImage().add("http://hotelzzz.oneclick-sa.com/medias/room/big/39/royal-sonesta-new-orleans-bourbon-balcony-hospitality-suite.jpg");
+        rooms.add(new Rooms("Royal suite","1,500",5,"Private bathroom\n" +
+                "\n" +
+                "Room Size: 60 m²\n" +
+                "\n" +
+                "Featuring a modern design and free Wi-Fi, this spacious, air-conditioned suite has a bedroom and 2 flat-screen satellite TVs. It offers a kitchenette, dining area and living room. A bath and shower are fitted in the private bathroom.\n" +
+                "\n" +
+                "Room Facilities: Safe, Air conditioning, Iron, Ironing facilities, Sitting area, Walk-in closet, Carpeted, Sofa, Hardwood/Parquet floors, Wardrobe/Closet, Shower, Bathtub, Hairdryer, Bathrobe, Free toiletries, Toilet, Bathroom, Slippers, TV, Telephone, Satellite channels, Cable channels, Minibar, Refrigerator, Microwave, Kitchen, Dining area, Electric kettle, Kitchenware, Oven, Stovetop, Wake-up service, Alarm clock\n" +
+                "\n" +
+                "Free WiFi is available in all rooms.\n","Pool & Jacuzzi Suite"));
+        rooms.get(rooms.size()-1).getRoomImage().add("http://hotelzzz.oneclick-sa.com/medias/room/big/39/royal-sonesta-new-orleans-bourbon-balcony-hospitality-suite.jpg");
+        rooms.add(new Rooms("Royal suite","1,500",5,"Private bathroom\n" +
+                "\n" +
+                "Room Size: 60 m²\n" +
+                "\n" +
+                "Featuring a modern design and free Wi-Fi, this spacious, air-conditioned suite has a bedroom and 2 flat-screen satellite TVs. It offers a kitchenette, dining area and living room. A bath and shower are fitted in the private bathroom.\n" +
+                "\n" +
+                "Room Facilities: Safe, Air conditioning, Iron, Ironing facilities, Sitting area, Walk-in closet, Carpeted, Sofa, Hardwood/Parquet floors, Wardrobe/Closet, Shower, Bathtub, Hairdryer, Bathrobe, Free toiletries, Toilet, Bathroom, Slippers, TV, Telephone, Satellite channels, Cable channels, Minibar, Refrigerator, Microwave, Kitchen, Dining area, Electric kettle, Kitchenware, Oven, Stovetop, Wake-up service, Alarm clock\n" +
+                "\n" +
+                "Free WiFi is available in all rooms.\n","Pool & Jacuzzi Suite"));
+        rooms.get(rooms.size()-1).getRoomImage().add("http://hotelzzz.oneclick-sa.com/medias/room/big/39/royal-sonesta-new-orleans-bourbon-balcony-hospitality-suite.jpg");
+        rooms.add(new Rooms("Royal suite","1,500",5,"Private bathroom\n" +
+                "\n" +
+                "Room Size: 60 m²\n" +
+                "\n" +
+                "Featuring a modern design and free Wi-Fi, this spacious, air-conditioned suite has a bedroom and 2 flat-screen satellite TVs. It offers a kitchenette, dining area and living room. A bath and shower are fitted in the private bathroom.\n" +
+                "\n" +
+                "Room Facilities: Safe, Air conditioning, Iron, Ironing facilities, Sitting area, Walk-in closet, Carpeted, Sofa, Hardwood/Parquet floors, Wardrobe/Closet, Shower, Bathtub, Hairdryer, Bathrobe, Free toiletries, Toilet, Bathroom, Slippers, TV, Telephone, Satellite channels, Cable channels, Minibar, Refrigerator, Microwave, Kitchen, Dining area, Electric kettle, Kitchenware, Oven, Stovetop, Wake-up service, Alarm clock\n" +
+                "\n" +
+                "Free WiFi is available in all rooms.\n","Pool & Jacuzzi Suite"));
+        rooms.get(rooms.size()-1).getRoomImage().add("http://hotelzzz.oneclick-sa.com/medias/room/big/39/royal-sonesta-new-orleans-bourbon-balcony-hospitality-suite.jpg");
+        rooms.add(new Rooms("Royal suite","1,500",5,"Private bathroom\n" +
+                "\n" +
+                "Room Size: 60 m²\n" +
+                "\n" +
+                "Featuring a modern design and free Wi-Fi, this spacious, air-conditioned suite has a bedroom and 2 flat-screen satellite TVs. It offers a kitchenette, dining area and living room. A bath and shower are fitted in the private bathroom.\n" +
+                "\n" +
+                "Room Facilities: Safe, Air conditioning, Iron, Ironing facilities, Sitting area, Walk-in closet, Carpeted, Sofa, Hardwood/Parquet floors, Wardrobe/Closet, Shower, Bathtub, Hairdryer, Bathrobe, Free toiletries, Toilet, Bathroom, Slippers, TV, Telephone, Satellite channels, Cable channels, Minibar, Refrigerator, Microwave, Kitchen, Dining area, Electric kettle, Kitchenware, Oven, Stovetop, Wake-up service, Alarm clock\n" +
+                "\n" +
+                "Free WiFi is available in all rooms.\n","Pool & Jacuzzi Suite"));
+        rooms.get(rooms.size()-1).getRoomImage().add("http://hotelzzz.oneclick-sa.com/medias/room/big/39/royal-sonesta-new-orleans-bourbon-balcony-hospitality-suite.jpg");
+        rooms.add(new Rooms("Royal suite","1,500",5,"Private bathroom\n" +
+                "\n" +
+                "Room Size: 60 m²\n" +
+                "\n" +
+                "Featuring a modern design and free Wi-Fi, this spacious, air-conditioned suite has a bedroom and 2 flat-screen satellite TVs. It offers a kitchenette, dining area and living room. A bath and shower are fitted in the private bathroom.\n" +
+                "\n" +
+                "Room Facilities: Safe, Air conditioning, Iron, Ironing facilities, Sitting area, Walk-in closet, Carpeted, Sofa, Hardwood/Parquet floors, Wardrobe/Closet, Shower, Bathtub, Hairdryer, Bathrobe, Free toiletries, Toilet, Bathroom, Slippers, TV, Telephone, Satellite channels, Cable channels, Minibar, Refrigerator, Microwave, Kitchen, Dining area, Electric kettle, Kitchenware, Oven, Stovetop, Wake-up service, Alarm clock\n" +
+                "\n" +
+                "Free WiFi is available in all rooms.\n","Pool & Jacuzzi Suite"));
+        rooms.get(rooms.size()-1).getRoomImage().add("http://hotelzzz.oneclick-sa.com/medias/room/big/39/royal-sonesta-new-orleans-bourbon-balcony-hospitality-suite.jpg");
 
 
     }

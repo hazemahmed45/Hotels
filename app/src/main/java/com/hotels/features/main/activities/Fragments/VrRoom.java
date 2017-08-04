@@ -38,6 +38,15 @@ public class VrRoom extends Fragment {
         // Required empty public constructor
     }
 
+    private static VrRoom mInstance;
+    public static VrRoom GetInstance()
+    {
+        if(mInstance==null)
+        {
+            mInstance=new VrRoom();
+        }
+        return mInstance;
+    }
     @BindView(R.id.pano_vr_room) VrPanoramaView panoWidgetView;
     VrPanoramaView.Options panoOptions;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -118,4 +127,5 @@ public class VrRoom extends Fragment {
                     .show();
         }
     }
+
 }

@@ -13,16 +13,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".features.main.activities.Activities.Splash.SplashScreen">
+        <activity android:name=".features.main.activities.Activities.Splash.SplashScreen"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".features.main.activities.Activities.Login.LoginScreen" />
-        <activity android:name=".features.main.activities.Activities.Login.SignInScreen" />
-        <activity android:name=".features.main.activities.Activities.Login.SignUpScreen" />
+        <activity android:name=".features.main.activities.Activities.Login.LoginScreen"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".features.main.activities.Activities.Login.SignInScreen"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".features.main.activities.Activities.Login.SignUpScreen"
+            android:screenOrientation="portrait"/>
         <!--<activity android:name=".features.main.activities.Activities.Splash.RoomScreen"></activity>-->
     </application>
 

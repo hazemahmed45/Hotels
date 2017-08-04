@@ -37,7 +37,15 @@ public class HotelsScreen extends Fragment {
     public HotelsScreen() {
         // Required empty public constructor
     }
-
+    private static HotelsScreen mInstance;
+    public static HotelsScreen GetInstance()
+    {
+        if(mInstance==null)
+        {
+            mInstance=new HotelsScreen();
+        }
+        return mInstance;
+    }
     @BindView(R.id.hotels_slider)SliderLayout viewPager;
     @BindView(R.id.hotels_text)TextView hotelDesc;
     @Override

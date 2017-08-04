@@ -152,7 +152,9 @@ public class LoginScreen extends BaseActivity {
                                 }
                                 else
                                 {
-                                    NavigationHelper.LaunchFragment(AccountViewPagerFragment.getInstance(),getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
+                                    AccountViewPagerFragment AVPF=AccountViewPagerFragment.getInstance();
+                                    //AVPF.container.;
+                                    NavigationHelper.LaunchFragment(AVPF,getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
                                 }
                                 check=false;
                                 break;
@@ -167,6 +169,7 @@ public class LoginScreen extends BaseActivity {
                                 else
                                 {
                                     AccountViewPagerFragment AVPF=AccountViewPagerFragment.getInstance();
+                                    //AVPF.container.getChildAt(1);
                                     NavigationHelper.LaunchFragment(AVPF,getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
                                 }
                                 check=false;
@@ -174,7 +177,7 @@ public class LoginScreen extends BaseActivity {
                             }
                             case 4:
                             {
-                                HotelsScreen HS=new HotelsScreen();
+                                HotelsScreen HS=HotelsScreen.GetInstance();
                                 NavigationHelper.LaunchFragment(HS,getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
                                 getSupportActionBar().setTitle("Hotels");
                                 check=false;
@@ -182,7 +185,7 @@ public class LoginScreen extends BaseActivity {
                             }
                             case 6:
                             {
-                                BookingScreen BS=new BookingScreen();
+                                BookingScreen BS=BookingScreen.GetInstance();
                                 NavigationHelper.LaunchFragment(BS,getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
                                 getSupportActionBar().setTitle("Booking");
                                 check=false;
@@ -190,7 +193,7 @@ public class LoginScreen extends BaseActivity {
                             }
                             case 7:
                             {
-                                ContactUsFragment CUF=new ContactUsFragment();
+                                ContactUsFragment CUF=ContactUsFragment.GetInstance();
                                 NavigationHelper.LaunchFragment(CUF,getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
                                 check=false;
                                 getSupportActionBar().setTitle("Contact Us");
@@ -198,7 +201,7 @@ public class LoginScreen extends BaseActivity {
                             }
                             case 8:
                             {
-                                AboutUsFragment AUF=new AboutUsFragment();
+                                AboutUsFragment AUF=AboutUsFragment.GetInstance();
                                 NavigationHelper.LaunchFragment(AUF,getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
                                 getSupportActionBar().setTitle("About Us");
                                 check=false;

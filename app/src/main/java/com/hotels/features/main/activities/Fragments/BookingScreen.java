@@ -40,6 +40,15 @@ public class BookingScreen extends Fragment {
         // Required empty public constructor
     }
 
+    private static BookingScreen mInstance;
+    public static BookingScreen GetInstance()
+    {
+        if(mInstance==null)
+        {
+            mInstance=new BookingScreen();
+        }
+        return mInstance;
+    }
     @BindView(R.id.booking_adult_spinner)Spinner AdultSpinner;
     @BindView(R.id.booking_child_spinner)Spinner ChildSpinner;
     @BindView(R.id.booking_room_spinner)Spinner RoomSpinner;

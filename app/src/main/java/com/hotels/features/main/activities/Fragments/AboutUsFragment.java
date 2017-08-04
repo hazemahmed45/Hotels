@@ -26,7 +26,15 @@ public class AboutUsFragment extends Fragment {
     public AboutUsFragment() {
         // Required empty public constructor
     }
-
+    private static AboutUsFragment mInstance;
+    public static AboutUsFragment GetInstance()
+    {
+        if(mInstance==null)
+        {
+            mInstance=new AboutUsFragment();
+        }
+        return mInstance;
+    }
     @BindView(R.id.about_us_paragraph)TextView paragraph;
     @OnClick(R.id.about_us_facebook)void FacebookButtonCliked()
     {

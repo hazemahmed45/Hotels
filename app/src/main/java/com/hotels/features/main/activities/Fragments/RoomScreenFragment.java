@@ -40,6 +40,16 @@ import butterknife.OnClick;
  */
 public class RoomScreenFragment extends Fragment {
 
+
+    private static RoomScreenFragment mInstance;
+    public static RoomScreenFragment GetInstance()
+    {
+        if(mInstance==null)
+        {
+            mInstance=new RoomScreenFragment();
+        }
+        return mInstance;
+    }
     @BindView(R.id.room_image_flipper)AdapterViewFlipper Flipper;
     @BindView(R.id.room_name)TextView name;
     @BindView(R.id.room_price) TextView price;
@@ -49,7 +59,7 @@ public class RoomScreenFragment extends Fragment {
     Rooms room;
     @OnClick(R.id.room_check_in)void CheckInButtonClicked()
     {
-        NavigationHelper.LaunchFragment(new BookingScreen(),((AppCompatActivity)RoomScreenFragment.this.getActivity()).getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
+        NavigationHelper.LaunchFragment(BookingScreen.GetInstance(),((AppCompatActivity)RoomScreenFragment.this.getActivity()).getSupportFragmentManager(),R.id.FrameLayoutLoginScreen);
     }
     @OnClick(R.id.room_vr)void RoomVRButtonClicked()
     {

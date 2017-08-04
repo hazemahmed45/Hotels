@@ -29,6 +29,15 @@ public class ContactUsFragment extends Fragment {
         // Required empty public constructor
     }
 
+    private static ContactUsFragment mInstance;
+    public static ContactUsFragment GetInstance()
+    {
+        if (mInstance==null)
+        {
+            mInstance=new ContactUsFragment();
+        }
+        return mInstance;
+    }
     @BindView(R.id.contact_us_email)EditText email;
     @BindView(R.id.contact_us_username)EditText username;
     @BindView(R.id.contact_us_code)EditText code;

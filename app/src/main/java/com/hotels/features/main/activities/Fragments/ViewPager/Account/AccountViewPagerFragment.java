@@ -22,6 +22,10 @@ public class AccountViewPagerFragment extends Fragment {
 
     public AccountViewPagerFragment() {
         // Required empty public constructor
+        adapter=new AccountViewPagerAdapter(this.getChildFragmentManager());
+        viewPager.setAdapter(adapter);
+        tabLayout.setupWithViewPager(viewPager);
+
     }
     @BindView(R.id.account_tablayout)TabLayout tabLayout;
     @BindView(R.id.account_viewpager)ViewPager viewPager;
@@ -35,7 +39,7 @@ public class AccountViewPagerFragment extends Fragment {
         return accountViewPagerFragment;
     }
     LayoutInflater inflater;
-    ViewGroup container;
+    public ViewGroup container;
     Bundle SavedInst;
     AccountViewPagerAdapter adapter;
     @Override
@@ -48,9 +52,7 @@ public class AccountViewPagerFragment extends Fragment {
         View view=inflater.inflate(R.layout.account_view_pager_fragment, container, false);
         ButterKnife.bind(this,view);
 
-        adapter=new AccountViewPagerAdapter(this.getChildFragmentManager());
-        viewPager.setAdapter(adapter);
-        tabLayout.setupWithViewPager(viewPager);
+
         //viewPager.setOffscreenPageLimit(2);
         return view;
     }
